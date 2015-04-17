@@ -1,0 +1,27 @@
+---
+page_title: "Offscale.io launch"
+title: "Offscale.io launch"
+tags: multicloud, paas, hybrid, monitoring
+author: Samuel Marks
+---
+
+At the IBM SoftLayer Sydney datacentre launch earlier this week, offscale.io was launched.
+
+Here at [offscale.io](http://offscale.io) we build/integrate hybrid multicloud and related technologies to enable:
+
+  - IT automation
+  - Software Engineering streamlining
+  - DevOps-as-a-Service
+
+## The Future
+
+We have a serious roadmap [planned for 2015](../about.html). Including:
+
+  - Multicloud strategy development
+  - Hybrid multicloud integration
+  - PaaS
+  - Big data
+
+If you are interested in using offscale.io at your company, please email:
+<a href="mailto:offscale.io@gmail.com">offscale.io@gmail.com</a> and we'd
+be happy to talk with you.

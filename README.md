@@ -17,7 +17,6 @@ Running the site locally is simple. Clone this repo and run the following
 commands:
 
 ```
-$ git clone https://github.com/offscale/offscale.github.io source
 $ bundle
 $ bundle exec middleman server
 ```
@@ -26,3 +25,9 @@ Then open up `localhost:4567`. Note that some URLs you may need to append
 ".html" to make them work (in the navigation and such).
 
 Note that the initial theme is taken from the [hashicorp/www](https://github.com/hashicorp/www) repo.
+
+## Building the Site
+```
+$ bundle exec middleman build
+```
+Now the /build directory can be deployed to your Github Pages site.

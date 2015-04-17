@@ -1,0 +1,29 @@
+---
+page_title: Blog
+title: Blog
+layout: blog
+---
+
+<div class="container">
+	<div class="col-md-11">
+		<% blog.articles.each_index do |i| %>
+		<% article = blog.articles[i] %>
+		<article class="right-aligned">
+			<div class="row">
+				<!-- post summary content -->
+				<div class="col-md-4 col-sm-12 blog-image">
+					<% if article.data.list_image_url %>
+						<%= image_tag article.data.list_image_url, :width => "287", :height => "284" %>
+					<% end %>
+				</div>	<!-- span -->
+				<div class="col-md-8 col-sm-12">
+					<%= partial "layouts/blog_meta", locals: {article: article} %>
+					<p><%= article.summary %></p>
+					<a class="hbtn outline-btn black small read-more" href="<%= article.url %>">read more</a>
+				</div>	<!-- span -->
+			</div>	<!-- row -->
+		</article>
+		<% end %>
+	</div>
+</div> <!-- container -->
+

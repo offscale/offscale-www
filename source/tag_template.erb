@@ -1,0 +1,27 @@
+---
+pageable: true
+per_page: 12
+layout: blog
+title: #{tagname}
+---
+
+<div class="container">
+    <div class="col-md-11">
+        <% page_articles.select {|a| a.tags.include?(tagname) }.each do |article| %>
+        <article class="right-aligned">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 blog-image">
+                    <% if article.data.list_image_url %>
+                        <%= image_tag article.data.list_image_url, :width => "287", :height => "284" %>
+                    <% end %>
+                </div>  <!-- span -->
+                <div class="col-md-8 col-sm-12">
+                    <%= partial "layouts/blog_meta", locals: {article: article} %>
+                    <p><%= article.summary %></p>
+                    <a class="hbtn outline-btn black small read-more" href="<%= article.url %>">read more</a>
+                </div>  <!-- span -->
+            </div>  <!-- row -->
+        </article>
+        <% end %>
+    </div>
+</div> <!-- container -->

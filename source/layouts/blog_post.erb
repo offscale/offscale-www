@@ -1,0 +1,31 @@
+<% wrap_layout :layout do %>
+
+<section class="page">
+	<article class="blog-post">
+		<div class="container">
+
+			<% if current_article.data.post_image_url %>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 blog-image">
+					<%= image_tag current_article.data.post_image_url %>
+				</div>
+			</div>
+			<% end %>
+
+			<div class="row">
+			    <div class="col-md-8 col-md-offset-2">
+					<%= partial "layouts/blog_meta", locals: {article: current_article} %>
+
+					<%= current_article.body %>
+					<div class="row">
+					    <div class="col-md-12">
+					        <a class="hbtn outline-btn black small pull-right" href="/blog.html">More posts</a>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
+
+<% end %>
