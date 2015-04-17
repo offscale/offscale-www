@@ -126,3 +126,4 @@ build/Release
 node_modules
 
 
+source/bower_components
