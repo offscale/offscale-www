@@ -1,0 +1,25 @@
+<!-- Set the variable collection to the collection you wish to display -->
+<div class="condensed-feed">
+  <div class="post">
+    <h1 class="page-heading">{{ collection.title }}</h1>
+    <ul class="post-list">
+      {% assign sorted = collection.docs | sort: 'date' %}
+      {% assign end = sorted | first %}
+      <!-- Dynamically fill tiles with posts reverse chronologically -->
+      {% for docs in sorted reversed limit:10 %}
+      {% if docs != end %}
+      <li class="condensed-feed-item">
+        <hr class="condensed-feed-divider">
+        {% if docs.image %}
+        <img class="condensed-feed-icon" src="{{ site.baseurl }}/images/{{docs.image}}">
+        {% endif %}
+        <h2 class="condensed-feed-subheading">
+        <a class="condensed-feed-link" href="{{ docs.url | prepend: site.baseurl }}">{{ docs.title }}</a>
+        </h2>
+        <span class="condensed-feed-meta">{{ docs.description }}</span>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

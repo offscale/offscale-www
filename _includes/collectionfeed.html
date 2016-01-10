@@ -1,0 +1,24 @@
+<!-- Set the variable label to the collection you wish to display -->
+<ul class="post-list">
+  {% for collection in site.collections %}
+  {% if collection.label == label %}
+  {% assign sorted = collection.docs | sort: 'date' %}
+  {% assign end = sorted | first %}
+  <!-- Dynamically fill tiles with posts reverse chronologically -->
+  {% for docs in sorted reversed %}
+  {% if docs != end %}
+  <li class="feed-item">
+    <hr class="feed-divider">
+    {% if docs.image %}
+    <img class="feed-icon" src="{{ site.baseurl }}/images/{{docs.image}}">
+    {% endif %}
+    <h2 class="feed-subheading">
+      <a class="feed-link" href="{{ docs.url | prepend: site.baseurl }}">{{ docs.title }}</a>
+        </h2>
+    <span class="feed-meta">{{ docs.excerpt }}</span>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</ul>
