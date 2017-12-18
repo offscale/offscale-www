@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import {
-  MdButtonModule,
-  MdCardModule,
-  MdCheckboxModule,
-  MdDialogModule,
-  MdGridListModule,
-  MdInputModule,
-  MdMenuModule,
-  MdProgressBarModule,
-  MdSidenavModule,
-  MdSnackBarModule,
-  MdToolbarModule
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatGridListModule,
+  MatInputModule,
+  MatMenuModule,
+  MatProgressBarModule,
+  MatSidenavModule,
+  MatSnackBarModule,
+  MatToolbarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    MdInputModule, MdButtonModule, MdCheckboxModule, MdSidenavModule,
-    MdProgressBarModule, MdCardModule, MdMenuModule, MdDialogModule,
-    MdSnackBarModule, MdToolbarModule, MdGridListModule
+    MatInputModule, MatButtonModule, MatCheckboxModule, MatSidenavModule,
+    MatProgressBarModule, MatCardModule, MatMenuModule, MatDialogModule,
+    MatSnackBarModule, MatToolbarModule, MatGridListModule
   ],
   exports: [
     BrowserAnimationsModule,
-    MdInputModule, MdButtonModule, MdCheckboxModule, MdSidenavModule,
-    MdProgressBarModule, MdCardModule, MdMenuModule, MdDialogModule,
-    MdSnackBarModule, MdToolbarModule, MdGridListModule
+    MatInputModule, MatButtonModule, MatCheckboxModule, MatSidenavModule,
+    MatProgressBarModule, MatCardModule, MatMenuModule, MatDialogModule,
+    MatSnackBarModule, MatToolbarModule, MatGridListModule
   ]
 })
 export class MaterialImportModule {
