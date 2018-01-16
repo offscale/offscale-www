@@ -1,7 +1,7 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {FooterComponent, FooterModule} from './footer';
-import {DocsAppTestingModule} from '../../testing/testing-module';
+import { FooterComponent, FooterModule } from './footer';
+import { DocsAppTestingModule } from '../../testing/testing-module';
 
 
 describe('FooterComponent', () => {

@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
 
-import { AppComponent } from './app.component';
 import { MaterialImportModule } from './material-import/material-import.module';
 import { FooterModule } from './footer/footer';
 import { SvgViewerModule } from './svg-viewer/svg-viewer';
+import { AppComponent } from './app.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SvgViewerModule } from './svg-viewer/svg-viewer';
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, HttpModule,
-    MaterialImportModule, FooterModule, SvgViewerModule
+    FlexLayoutModule, MaterialImportModule,
+    FooterModule, SvgViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

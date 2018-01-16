@@ -1,11 +1,11 @@
-import {Component, NgModule} from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 @Component({
   selector: 'offscale-app-footer',
   templateUrl: './footer.html',
   styleUrls: ['./footer.scss']
 })
-export class FooterComponent { }
+export class FooterComponent {}
 
 
 @NgModule({

@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
 import {
-  MatButtonModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatGridListModule,
-  MatInputModule,
-  MatMenuModule,
-  MatProgressBarModule,
-  MatSidenavModule,
-  MatSnackBarModule,
-  MatToolbarModule
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatDialogModule, MatGridListModule, MatInputModule,
+  MatMenuModule, MatProgressBarModule, MatSidenavModule, MatSnackBarModule, MatToolbarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

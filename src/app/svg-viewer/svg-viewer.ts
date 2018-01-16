@@ -1,5 +1,5 @@
-import {Component, ElementRef, Input, NgModule, OnInit} from '@angular/core';
-import {Http} from '@angular/http';
+import { Component, ElementRef, Input, NgModule, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -42,4 +42,4 @@ const getAbsolutePathFromSrc = (src: string) =>
   exports: [SvgViewerComponent],
   declarations: [SvgViewerComponent],
 })
-export class SvgViewerModule { }
+export class SvgViewerModule {}
