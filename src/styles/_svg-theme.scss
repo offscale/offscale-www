@@ -3,21 +3,21 @@
 
 // Mixin to create a css class for each fill, stroke, and stop-color for a given color.
 @mixin _svgColorProperties($className, $color) {
-  .svg-#{$className}-fill {
+  .docs-svg-#{$className}-fill {
     fill: $color;
   }
 
-  .svg-#{$className}-stroke {
+  .docs-svg-#{$className}-stroke {
     stroke: $color;
   }
 
-  .svg-#{$className}-stop-color {
+  .docs-svg-#{$className}-stop-color {
     stop-color: $color;
   }
 }
 
 // Mixin to apply theme colors for generated API docs.
-@mixin site-svg-theme($theme) {
+@mixin docs-site-svg-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);

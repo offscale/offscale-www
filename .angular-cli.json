@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "offscale-www"
+    "name": "offscale-io"
   },
   "apps": [
     {
@@ -17,9 +17,9 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "offscale",
+      "prefix": "app",
       "styles": [
-        "material-offscale.scss",
+        "main.scss",
         "styles.css"
       ],
       "scripts": [],

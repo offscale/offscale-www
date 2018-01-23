@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-.button[mat-button], .button[mat-raised-button] {
+.docs-button[md-button], .docs-button[md-raised-button] {
   text-transform: uppercase;
 }
 
@@ -11,21 +11,15 @@ h1, h2 {
   font-weight: 400;
 }
 
-pre {
-  // Pre elements won't wrap text by default and can exceed the boundaries of their parent element.
-  // This adds extra scroll space when visiting the docs mobile. Pre-wrapping the code examples
-  // will ensure that the code never exceeds the page width.
-  white-space: pre-wrap;
-}
-
-.primary-header {
+.docs-primary-header {
   padding-left: 20px;
 
   h1 {
     font-size: 30px;
     font-weight: 300;
     margin: 0;
-    padding: 50px;
+    padding: 28px 8px;
+    font-size: 20px;
   }
 }
 
@@ -33,23 +27,27 @@ code {
   font-size: 90%;
 }
 
+.docs-markdown-pre code {
+  font-size: 100%;
+}
+
 // These styles are for controlling SVGs without using the /deep/ selector
 
-.component-category-list-card-image svg {
+.docs-component-category-list-card-image svg {
   width: 100%;
 }
 
-.footer-angular-logo svg {
+.docs-footer-angular-logo svg {
   height: 50px;
 }
 
-.angular-logo svg {
+.docs-angular-logo svg {
   height: 26px;
   margin: 0 4px 3px 0;
   vertical-align: middle;
 }
 
-.github-logo svg {
+.docs-github-logo svg {
   height: 21px;
   margin: 0 7px 2px 0;
   vertical-align: middle;

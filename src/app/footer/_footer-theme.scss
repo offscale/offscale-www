@@ -5,8 +5,8 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-  offscale-app-footer {
-    .footer-links a {
+  app-footer {
+    .docs-footer-links a {
       color: mat-color($primary, default-contrast);
     }
   }
