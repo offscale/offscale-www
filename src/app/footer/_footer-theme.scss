@@ -9,5 +9,10 @@
     .docs-footer-links a {
       color: mat-color($primary, default-contrast);
     }
+
+    .footer-logo, a {
+      padding-right: 8px;
+      text-decoration: none;
+    }
   }
 }
