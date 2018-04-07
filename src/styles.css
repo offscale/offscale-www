@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+#header {
+  width: 100%;
+  z-index: 2;
+}
+
+#header-main {
+  background-color: #003366;
+  border: none;
+  /* 	border-bottom: 2px solid #fcba19; */
+  /* 	padding-bottom: 5px; */
+}
+
+#header .header-main-left, #header .header-main-right {
+  padding: 0;
+}
+
+#logo {
+  float: left;
+}
+
+#header .logo {
+  display: block;
+}

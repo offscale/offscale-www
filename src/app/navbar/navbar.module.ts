@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule, MatIconModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 
-import { NavbarComponent } from './navbar.component';
 import { PlatformPickerModule } from '../platform-picker/platform-picker.module';
-import { RouterModule } from '@angular/router';
+import { SvgViewerModule } from '../svg-viewer/svg-viewer.module';
+import { NavbarComponent } from './navbar.component';
 
 @NgModule({
   imports: [
     CommonModule, RouterModule,
     MatButtonModule, MatIconModule, MatToolbarModule, MatSelectModule,
-    PlatformPickerModule
+    PlatformPickerModule, SvgViewerModule
   ],
   declarations: [NavbarComponent],
   exports: [NavbarComponent]
