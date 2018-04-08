@@ -30,32 +30,34 @@
 <div class="container main-content">
   <div class="well">
     Offscale.io is a software consultancy specialising in:
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-info">
-          cloud migration
-        </button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-info">
-          infrastructure automation
-        </button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-success">
-          scalable software development
-        </button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary">
-          data analytics
-        </button>
-      </div>
+    <div class="btn-group btn-group-justified" role="group"
+         fxLayout="row" fxLayout.xs="column"
+         fxLayoutGap="1px">
+      <button class="btn btn-info" (click)="w.scrollTo(0, 20)"
+              fxFlex.gt-xs="25" style="width: 100%"
+              (click)="scrollToId('#cloud_and_auto')">
+        cloud
+      </button>
+      <button class="btn btn-info"
+              fxFlex.gt-xs="25" style="width: 100%"
+              (click)="scrollToId('#cloud_and_auto')">
+        automation
+      </button>
+      <button class="btn btn-success"
+              fxFlex.gt-xs="25" style="width: 100%"
+              (click)="scrollToId('#software_engineering')">
+        software engineering
+      </button>
+      <button class="btn btn-primary"
+              fxFlex.gt-xs="25" style="width: 100%"
+              (click)="scrollToId('#data_analytics')">
+        data analytics
+      </button>
     </div>
   </div>
 
   <!-- First content group -->
-  <div class="vertical-wrapper">
+  <div class="vertical-wrapper" id="cloud_and_auto">
     <!-- Left vertical area -->
     <div class="left hidden-sm hidden-xs">
       <div class="frame">
@@ -79,56 +81,50 @@
         </div>
 
         <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-3" style="padding-top: 2em">
-                <div href="#aws" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="svg cloud-logo hidden-xs hidden-sm"
-                       src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
-                  <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
-                </div>
-              </li>
-              <li class="col-md-3">
-                <div href="#azure" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/azure.svg"/>
-                  <h1 class="inverse-blue">Microsoft Azure</h1>
-                </div>
-              </li>
-              <li class="col-md-3" style="padding-top: 1em">
-                <div href="#ibm" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/ibm_cloud.png"/>
-                  <h1 class="inverse-blue">IBM Cloud</h1>
-                </div>
-              </li>
-              <li class="col-md-3">
-                <div href="#clouds" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="svg cloud-logo hidden-xs hidden-sm"
-                       src="../assets/img/header/KnowledgeSectors.svg"/>
-                  <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
-                </div>
-              </li>
-            </ul>
-
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="aws">
-                  <p>AWS is awesome because</p>
-                </div>
-                <div class="tab-pane fade" id="azure">
-                  <p>Azure is awesome because</p>
-                </div>
-                <div class="tab-pane fade" id="ibm">
-                  <p>IBM is awesome because</p>
-                </div>
-                <div class="tab-pane fade" id="clouds">
-                  <p>OpenStack is just one of the >50 others we support</p>
-                </div>
-              </div>
-            </div>
+          <ul class="adaptive-tabs nav nav-tabs" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
+              fxLayoutGap.xs="2px">
+            <li (click)="multicloud = 'aws'"
+                fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+              <img class="svg cloud-logo hidden-xs hidden-sm"
+                   src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
+              <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
+            </li>
+            <li (click)="multicloud = 'azure'"
+                fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+              <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/azure.svg"/>
+              <h1 class="inverse-blue">Microsoft Azure</h1>
+            </li>
+            <li (click)="multicloud = 'ibm'"
+                fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+              <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/ibm_cloud.png"/>
+              <h1 class="inverse-blue">IBM Cloud</h1>
+            </li>
+            <li (click)="multicloud = 'clouds'"
+                fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+              <img class="svg cloud-logo hidden-xs hidden-sm"
+                   src="../assets/img/header/KnowledgeSectors.svg"/>
+              <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" *ngIf="multicloud">
+        <div class="col-md-12">
+          <div *ngIf="multicloud === 'aws'">
+            <p>AWS is awesome because</p>
+          </div>
+          <div *ngIf="multicloud === 'azure'">
+            <p>Azure is awesome because</p>
+          </div>
+          <div *ngIf="multicloud === 'ibm'">
+            <p>IBM is awesome because</p>
+          </div>
+          <div *ngIf="multicloud === 'clouds'">
+            <p>OpenStack is just one of the >50 others we support</p>
           </div>
         </div>
       </div>
@@ -145,44 +141,35 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row goals">
-              <li class="col-md-4">
-                <div href="#InternalCapacity" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <h1 class="inverse-blue dashed-border">Goal 1<br/>Automate infrastructure deployment
-                    (DevOps)</h1>
-                </div>
-              </li>
-              <li class="col-md-4">
-                <div href="#ImproveCompetitiveness" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <h1 class="inverse-blue dashed-border">Goal 2<br/>Upgrade applications to
-                    'cloud-native'</h1>
-                </div>
-              </li>
-              <li class="col-md-4">
-                <div href="#ServiceCitizens" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <h1 class="inverse-blue dashed-border">Goal 3<br/>Elastic scaling</h1>
-                </div>
-              </li>
-            </ul>
+        <ul class="nav nav-tabs goals" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayoutGap.xs="2px">
+          <li (click)="approach = 'devops'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
+              fxFlex="calc(50% - 25px)">
+            <h1>Goal 1<br/>Automate infrastructure deployment
+              (DevOps)</h1>
+          </li>
+          <li (click)="approach = 'rebuild_apps'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
+              fxFlex="calc(50% - 25px)">
+            <h1>Goal 2<br/>Upgrade applications to
+              'cloud-native'</h1>
+          </li>
+          <li (click)="approach = 'elastic'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
+              fxFlex="calc(50% - 25px)">
+            <h1>Goal 3<br/>Elastic scaling</h1>
+          </li>
+        </ul>
+      </div>
 
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="InternalCapacity">
-                  <p>InternalCapacity InternalCapacity</p>
-                </div>
-                <div class="tab-pane fade" id="ImproveCompetitiveness">
-                  <p>ImproveCompetitiveness ImproveCompetitiveness</p>
-                </div>
-                <div class="tab-pane fade" id="ServiceCitizens">
-                  <p>ServiceCitizens ServiceCitizens</p>
-                </div>
-              </div>
-            </div>
+      <div class="row" *ngIf="approach">
+        <div class="col-md-12">
+          <div *ngIf="approach === 'devops'">
+            <p>devops devops</p>
+          </div>
+          <div *ngIf="approach === 'rebuild_apps'">
+            <p>rebuild_apps rebuild_apps</p>
+          </div>
+          <div *ngIf="approach === 'elastic'">
+            <p>elastic elastic</p>
           </div>
         </div>
       </div>
@@ -199,50 +186,41 @@
         </div>
 
         <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row circle-parent">
-              <li class="col-md-3">
-                <div href="#docker" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="sphere-logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
-                </div>
-              </li>
-              <li class="col-md-3">
-                <div href="#dcos" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="sphere-logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
-                </div>
-              </li>
-              <li class="col-md-3">
-                <div href="#EngagePeople" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="sphere-logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
-                </div>
-              </li>
-              <li class="col-md-3">
-                <div href="#github" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <img class="sphere-logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
-                </div>
-              </li>
-            </ul>
+          <ul class="adaptive-tabs nav nav-tabs circle-parent" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
+              fxLayoutGap.xs="2px">
+            <li fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+                <img class="sphere-logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
+            </li>
+            <li fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+                <img class="sphere-logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
+            </li>
+            <li fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+                <img class="sphere-logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
+            </li>
+            <li fxFlex="auto" fxFlex.gt-xs="20"
+                fxFlex="calc(50% - 25px)">
+                <img class="sphere-logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="docker">
-                  <p>docker docker</p>
-                </div>
-                <div class="tab-pane fade" id="dcos">
-                  <p>dcos dcos</p>
-                </div>
-                <div class="tab-pane fade" id="EngagePeople">
-                  <p>EngagePeople EngagePeople</p>
-                </div>
-                <div class="tab-pane fade" id="github">
-                  <p>github github</p>
-                </div>
-              </div>
-            </div>
+      <div class="row">
+        <div class="tab-content col-md-12">
+          <div class="tab-pane fade" id="docker">
+            <p>docker docker</p>
+          </div>
+          <div class="tab-pane fade" id="dcos">
+            <p>dcos dcos</p>
+          </div>
+          <div class="tab-pane fade" id="EngagePeople">
+            <p>EngagePeople EngagePeople</p>
+          </div>
+          <div class="tab-pane fade" id="github">
+            <p>github github</p>
           </div>
         </div>
       </div>
@@ -288,7 +266,7 @@
 
 
   <!-- Second content group -->
-  <div class="vertical-wrapper">
+  <div class="vertical-wrapper" id="software_engineering">
     <!-- Left vertical area -->
     <div class="left hidden-sm hidden-xs">
       <div class="frame">
@@ -495,7 +473,7 @@
 
 
   <!-- Third content group -->
-  <div class="vertical-wrapper">
+  <div class="vertical-wrapper" id="data_analytics">
     <!-- Left vertical area -->
     <div class="left hidden-sm hidden-xs">
       <div class="frame">
@@ -756,9 +734,10 @@
 
 
 <div id="footer">
-
-  <a (click)="w.scrollTo(0, 0)"><img src="../../assets/img/extra/back-to-top.png" alt="Back to top" title="Back to top"
-                         class="back-to-top footer-overlap" style="display: block;"></a>
+  <a (click)="w.scrollTo({top: 0, left: 0, behaviour: smooth})"><img src="../../assets/img/extra/back-to-top.png"
+                                                                     alt="Back to top" title="Back to top"
+                                                                     class="back-to-top footer-overlap"
+                                                                     style="display: block;"></a>
   <div id="footerWrapper">
     <div id="footerAdminSection">
       <div id="footerAdminLinksContainer" class="container">
