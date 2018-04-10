@@ -29,8 +29,9 @@
 <div class="well" fxLayout="column">
   Offscale.io is a software consultancy specialising in:
   <div class="btn-group btn-group-justified" role="group"
-       fxLayout="row" fxLayout.xs="column"
-       fxLayoutGap="1px">
+       fxLayout="row" fxLayoutGap="1px"
+       fxLayout.xs="column"
+  >
     <button class="btn btn-info"
             fxFlex style="width: 100%"
             (click)="scrollToId('#cloud_and_auto')">
@@ -58,7 +59,7 @@
   <!-- First content group -->
   <div class="vertical-wrapper" id="cloud_and_auto">
     <!-- Left vertical area -->
-    <div class="left hidden-sm hidden-xs">
+    <div fxShow.sm="false" fxShow.xs="false">
       <div class="frame">
         <div class="tab blue">
           <div class="tab-rounded"></div>
@@ -71,7 +72,7 @@
     <!-- First row -->
     <div class="right">
       <div class="vertical-wrapper">
-        <div class="hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-blue">Multicloud</div>
@@ -79,7 +80,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs" style="width: 100%"
+        <ul class="nav nav-tabs"
             fxLayoutAlign="stretch" fxLayoutGap="20px"
             fxLayout.xs="column" fxLayoutGap.xs="1px">
           <li (click)="multicloud = 'aws'" fxFlex>
@@ -122,7 +123,7 @@
 
       <!-- Second row -->
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-blue">Approach</div>
@@ -130,7 +131,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs circle-parent" style="width: 100%"
+        <ul class="nav nav-tabs circle-parent"
             fxLayoutAlign="stretch" fxLayoutGap="20px"
             fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li (click)="approach = 'devops'" class="inverse-blue dashed-border"
@@ -167,7 +168,7 @@
 
       <!-- Third row -->
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption wrap inverse-blue">Key technologies</div>
@@ -175,7 +176,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs circle-parent" style="width: 100%"
+        <ul class="nav nav-tabs circle-parent"
             fxLayoutAlign="stretch" fxLayout="row" fxLayoutGap="20px"
             fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li fxFlex>
@@ -214,7 +215,7 @@
 
       <!-- Fourth row -->
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption wrap inverse-blue">Philosophy</div>
@@ -222,7 +223,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs blue" fxLayout="row" style="width: 100%; border-radius: 0 0 15px 15px;">
+        <ul class="nav nav-tabs blue" fxLayout="row" style="border-radius: 0 0 15px 15px;">
           <li>
             <h1 class="small">Fully automate infrastructure, deployments and mobilise your
               stack portable.</h1>
@@ -247,7 +248,7 @@
   <!-- Second content group -->
   <div class="vertical-wrapper" id="software_engineering">
     <!-- Left vertical area -->
-    <div class="left hidden-sm hidden-xs">
+    <div fxShow.sm="false" fxShow.xs="false">
       <div class="frame">
         <div class="tab green">
           <div class="tab-rounded"></div>
@@ -260,7 +261,7 @@
     <!-- First row -->
     <div class="right">
       <div class="vertical-wrapper ocio-mission">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption wrap inverse-green">Idea</div>
@@ -268,7 +269,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs green" fxLayout="row" style="width: 100%; border-radius: 15px 15px 0 0;">
+        <ul class="nav nav-tabs green" fxLayout="row" style="border-radius: 15px 15px 0 0;">
           <li>
             <h1 class="small">Never engineer with one application in mind: think platform; think framework</h1>
           </li>
@@ -279,7 +280,7 @@
 
       <!-- Second row -->
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-green">Full-stack</div>
@@ -288,7 +289,7 @@
         </div>
 
 
-        <ul class="nav nav-tabs" style="width: 100%"
+        <ul class="nav nav-tabs"
             fxLayoutAlign="stretch" fxLayoutGap="20px"
             fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li fxFlex>
@@ -349,7 +350,7 @@
 
       <!-- Third row -->
       <div fxLayout="row">
-        <div class="hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-green">Strategic Goals</div>
@@ -357,7 +358,7 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs" style="width: 100%"
+        <ul class="nav nav-tabs"
             fxLayoutAlign="stretch" fxLayoutGap="0px"
             fxLayout.xs="column" fxLayoutGap.xs="0px">
           <li class="puzzle puzzle-top" fxFlex>
@@ -423,7 +424,7 @@
   <!-- / Second content group -->
   <div class="vertical-wrapper" id="data_analytics">
     <!-- Left vertical area -->
-    <div class="left hidden-sm hidden-xs">
+    <div fxShow.sm="false" fxShow.xs="false">
       <div class="frame">
         <div class="tab dark-blue">
           <div class="tab-rounded"></div>
@@ -436,7 +437,7 @@
     <!-- First row -->
     <div class="right">
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-dark-blue">Core</div>
@@ -445,40 +446,38 @@
         </div>
 
 
-        <div class="right">
-          <ul class="nav nav-tabs" style="width: 100%"
-              fxLayoutAlign="stretch" fxLayoutGap="20px"
-              fxLayout.xs="column" fxLayoutGap.xs="2px">
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
-              Artificial Intelligence
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/it-service-delivery.png"/><br/>
-              Natural Language Processing
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/identity-management.png"/><br/>
-              Server log investigation
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
-              Multivariate regression
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/policy-standards-architecture.png"/><br/>
-              Research focussed (PhD+)
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/strategy-planning.png"/><br/>
-              Report generation
-            </li>
-            <li class="inverse-dark-blue" fxFlex>
-              <img src="../../assets/img/dark-blue/information-security.png"/><br/>
-              Excel extrapolation
-            </li>
-          </ul>
-        </div>
+        <ul class="nav nav-tabs"
+            fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayout.xs="column" fxLayoutGap.xs="2px">
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
+            Artificial Intelligence
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/it-service-delivery.png"/><br/>
+            Natural Language Processing
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/identity-management.png"/><br/>
+            Server log investigation
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
+            Multivariate regression
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/policy-standards-architecture.png"/><br/>
+            Research focussed (PhD+)
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/strategy-planning.png"/><br/>
+            Report generation
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/information-security.png"/><br/>
+            Excel extrapolation
+          </li>
+        </ul>
 
         <!-- <div class="row">
             <div class="tab-content col-md-12">
@@ -493,7 +492,7 @@
 
       <!-- Third row -->
       <div fxLayout="row">
-        <div class="hidden-sm hidden-xs">
+        <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-dark-blue">Offerings</div>
@@ -501,11 +500,12 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs" style="width: 100%"
+        <ul class="nav nav-tabs"
             fxLayoutAlign="stretch" fxLayoutGap="0px"
             fxLayout.xs="column" fxLayoutGap.xs="0px">
           <li class="inverse-dark-blue" fxFlex>
-            <mat-icon class="success-logo">dashboard</mat-icon><br>
+            <mat-icon class="success-logo">dashboard</mat-icon>
+            <br>
             AI dashboard
           </li>
           <li class="inverse-dark-blue" fxFlex>
