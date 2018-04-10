@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/devicon/devicon.min.css",
         "main.scss",
         "styles.css"
       ],

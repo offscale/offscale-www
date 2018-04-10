@@ -4,7 +4,7 @@ import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
   selector: 'app-slash',
   templateUrl: './slash.component.html',
   styleUrls: [
-    '../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
+    './lib.css',
     './slash.component.scss'
   ]
 })
