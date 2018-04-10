@@ -9,8 +9,6 @@ import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
   ]
 })
 export class SlashComponent implements AfterViewInit {
-  w: Window = window;
-
   // tabs
   _multicloud: string;
   set multicloud(cloud: string) {
@@ -39,6 +37,10 @@ export class SlashComponent implements AfterViewInit {
     const e = document.getElementById(id.startsWith('#') ? id.substring(1) : id);
     if (e != null)
       e.scrollIntoView({behavior: 'smooth'});
+  }
+
+  scrollToTop() {
+    document.getElementsByTagName('app-navbar')[0].scrollIntoView({behavior: 'smooth'});
   }
 
   ngAfterViewInit() {

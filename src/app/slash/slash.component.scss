@@ -237,9 +237,9 @@ th {
 }
 
 .navigationRibbon {
-  -webkit-box-shadow: 0px 3px 3px 1px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0px 3px 3px 1px rgba(51, 51, 51, 0.5);
-  box-shadow: 0px 3px 3px 1px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0 3px 3px 1px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 3px 3px 1px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 3px 3px 1px rgba(51, 51, 51, 0.5);
   border-top: 2px solid #fcba19;
 }
 
@@ -1351,7 +1351,7 @@ img.back-to-top:hover {
     margin-bottom: 4px;
     position: absolute;
     right: 10px;
-    top: 0px;
+    top: 0;
     width: 60px;
     border: none;
     background-position: center center;
@@ -1419,7 +1419,7 @@ img.back-to-top:hover {
     top: 0;
   }
   .contentPageLeftNavigation>div {
-    padding-left: 0px;
+    padding-left: 0;
   }
   .contentPageLeftNavigation ul.leftNav {
     border-left: 1px solid #e2e2e2;
@@ -1819,7 +1819,6 @@ img.back-to-top:hover {
 
 #header.collapsed-header #header-main-row2 {
   position: absolute;
-  right: 0;
   background-color: #036;
   right: 65px;
   width: 440px;
@@ -1896,7 +1895,7 @@ img.back-to-top:hover {
 /* 	margin-bottom: 4px;		 */
 /* 	position: absolute; */
 /* 	left: 420px; */
-/* 	top: 0px; */
+/* 	top: 0; */
 /* 	width: 60px; */
 /* 	border: none; */
 /* 	background-position: center center; */
@@ -2008,21 +2007,12 @@ td.alert-content-col {
   /*background-image: url("../../assets/img/ /images/accordion-chevron.png");*/
   background-size: 14px 14px;
   background-repeat: no-repeat;
-  background-position: right 0px bottom 0px;
+  background-position: right 0 bottom 0;
   height: 14px;
   width: 14px;
   overflow:hidden;
   float:right;
 
-}
-
-.panel-heading .open{
-  /*Point arrow upwards*/
-  webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 .accordion-container{
@@ -2031,11 +2021,11 @@ td.alert-content-col {
 
 .panel-group .panel {
   margin-top: 6px;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .panel-body p.panel-text{
-  margin: 0px;
+  margin: 0;
 }
 
 .panel-group .panel+.panel {
@@ -2073,7 +2063,7 @@ a.accordion-btn:hover{
 
 .accordion-bar {
   background-color: #f1f1f1;
-  padding: 5px 0px;
+  padding: 5px 0;
 
 }
 
@@ -2096,7 +2086,7 @@ a.accordion-btn:hover{
   margin-top: -1em;
 }
 .panel-text p{
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 .panel>.panel-heading+.panel-collapse>.panel-body {
   border: 2px #f1f1f3;
@@ -2431,8 +2421,8 @@ h1 {
 
 .vertical-wrapper .frame {
   position: relative;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 50px;
   height: 100%;
 }
@@ -2452,7 +2442,7 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  line-height: 0px;  /* centre the text on the base line */
+  line-height: 0;  /* centre the text on the base line */
   white-space: nowrap;
   font-size: 1.2em;
 
@@ -2483,7 +2473,7 @@ h1 {
 }
 
 .main-content .right {
-  flex: 11 95%;
+  flex: 11 200%;
 }
 
 /*
@@ -2560,7 +2550,9 @@ h1 {
 }
 
 .cloud-logo {
-  max-height: 10em;
+  padding: 0;
+  margin: 0;
+  max-height: 6em;
   max-width: 10em;
 }
 

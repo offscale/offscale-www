@@ -26,36 +26,35 @@
   </dl>
 </section>
 -->
-
-<div class="container main-content">
-  <div class="well">
-    Offscale.io is a software consultancy specialising in:
-    <div class="btn-group btn-group-justified" role="group"
-         fxLayout="row" fxLayout.xs="column"
-         fxLayoutGap="1px">
-      <button class="btn btn-info" (click)="w.scrollTo(0, 20)"
-              fxFlex.gt-xs="25" style="width: 100%"
-              (click)="scrollToId('#cloud_and_auto')">
-        cloud
-      </button>
-      <button class="btn btn-info"
-              fxFlex.gt-xs="25" style="width: 100%"
-              (click)="scrollToId('#cloud_and_auto')">
-        automation
-      </button>
-      <button class="btn btn-success"
-              fxFlex.gt-xs="25" style="width: 100%"
-              (click)="scrollToId('#software_engineering')">
-        software engineering
-      </button>
-      <button class="btn btn-primary"
-              fxFlex.gt-xs="25" style="width: 100%"
-              (click)="scrollToId('#data_analytics')">
-        data analytics
-      </button>
-    </div>
+<div class="well" fxLayout="column">
+  Offscale.io is a software consultancy specialising in:
+  <div class="btn-group btn-group-justified" role="group"
+       fxLayout="row" fxLayout.xs="column"
+       fxLayoutGap="1px">
+    <button class="btn btn-info"
+            fxFlex style="width: 100%"
+            (click)="scrollToId('#cloud_and_auto')">
+      cloud
+    </button>
+    <button class="btn btn-info"
+            fxFlex style="width: 100%"
+            (click)="scrollToId('#cloud_and_auto')">
+      automation
+    </button>
+    <button class="btn btn-success"
+            fxFlex style="width: 100%"
+            (click)="scrollToId('#software_engineering')">
+      software engineering
+    </button>
+    <button class="btn btn-primary"
+            fxFlex style="width: 100%"
+            (click)="scrollToId('#data_analytics')">
+      data analytics
+    </button>
   </div>
+</div>
 
+<div class="main-content">
   <!-- First content group -->
   <div class="vertical-wrapper" id="cloud_and_auto">
     <!-- Left vertical area -->
@@ -72,7 +71,7 @@
     <!-- First row -->
     <div class="right">
       <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+        <div class="hidden-sm hidden-xs">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-blue">Multicloud</div>
@@ -80,37 +79,28 @@
           </div>
         </div>
 
-        <div class="right">
-          <ul class="adaptive-tabs nav nav-tabs" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
-              fxLayoutGap.xs="2px">
-            <li (click)="multicloud = 'aws'"
-                fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-              <img class="svg cloud-logo hidden-xs hidden-sm"
-                   src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
-              <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
-            </li>
-            <li (click)="multicloud = 'azure'"
-                fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-              <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/azure.svg"/>
-              <h1 class="inverse-blue">Microsoft Azure</h1>
-            </li>
-            <li (click)="multicloud = 'ibm'"
-                fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-              <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/ibm_cloud.png"/>
-              <h1 class="inverse-blue">IBM Cloud</h1>
-            </li>
-            <li (click)="multicloud = 'clouds'"
-                fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-              <img class="svg cloud-logo hidden-xs hidden-sm"
-                   src="../assets/img/header/KnowledgeSectors.svg"/>
-              <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav nav-tabs" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayout.xs="column" fxLayoutGap.xs="1px">
+          <li (click)="multicloud = 'aws'" fxFlex>
+            <img class="svg cloud-logo hidden-xs hidden-sm"
+                 src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
+            <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
+          </li>
+          <li (click)="multicloud = 'azure'" fxFlex>
+            <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/azure.svg"/>
+            <h1 class="inverse-blue">Microsoft Azure</h1>
+          </li>
+          <li (click)="multicloud = 'ibm'" fxFlex>
+            <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/ibm_cloud.png"/>
+            <h1 class="inverse-blue">IBM Cloud</h1>
+          </li>
+          <li (click)="multicloud = 'clouds'" fxFlex>
+            <img class="svg cloud-logo hidden-xs hidden-sm"
+                 src="../../assets/img/logos/mesosphere.svg"/>
+            <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
+          </li>
+        </ul>
       </div>
       <div class="row" *ngIf="multicloud">
         <div class="col-md-12">
@@ -128,8 +118,7 @@
           </div>
         </div>
       </div>
-      <!-- / First row -->
-
+      <!-- First row | 100 hours; -->
 
       <!-- Second row -->
       <div class="vertical-wrapper">
@@ -141,20 +130,21 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs goals" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
-            fxLayoutGap.xs="2px">
-          <li (click)="approach = 'devops'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
-              fxFlex="calc(50% - 25px)">
+        <ul class="nav nav-tabs circle-parent" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayout.xs="column" fxLayoutGap.xs="2px">
+          <li (click)="approach = 'devops'" class="inverse-blue dashed-border"
+              fxFlex>
             <h1>Goal 1<br/>Automate infrastructure deployment
               (DevOps)</h1>
           </li>
-          <li (click)="approach = 'rebuild_apps'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
-              fxFlex="calc(50% - 25px)">
+          <li (click)="approach = 'rebuild_apps'" class="inverse-blue dashed-border"
+              fxFlex>
             <h1>Goal 2<br/>Upgrade applications to
               'cloud-native'</h1>
           </li>
-          <li (click)="approach = 'elastic'" class="inverse-blue dashed-border" fxFlex="auto" fxFlex.gt-xs="30"
-              fxFlex="calc(50% - 25px)">
+          <li (click)="approach = 'elastic'" class="inverse-blue dashed-border"
+              fxFlex>
             <h1>Goal 3<br/>Elastic scaling</h1>
           </li>
         </ul>
@@ -185,30 +175,25 @@
           </div>
         </div>
 
-        <div class="right">
-          <ul class="adaptive-tabs nav nav-tabs circle-parent" fxLayout.xs="column" fxLayoutAlign="stretch" fxLayoutGap="20px"
-              fxLayoutGap.xs="2px">
-            <li fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-                <img class="sphere-logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
-            </li>
-            <li fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-                <img class="sphere-logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
-            </li>
-            <li fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-                <img class="sphere-logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
-            </li>
-            <li fxFlex="auto" fxFlex.gt-xs="20"
-                fxFlex="calc(50% - 25px)">
-                <img class="sphere-logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
-            </li>
-          </ul>
-        </div>
+        <ul class="nav nav-tabs circle-parent" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayout="row" fxLayoutGap="20px"
+            fxLayout.xs="column" fxLayoutGap.xs="2px">
+          <li fxFlex>
+            <img class="sphere-logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
+          </li>
+          <li fxFlex>
+            <img class="sphere-logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
+          </li>
+          <li fxFlex>
+            <img class="sphere-logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
+          </li>
+          <li fxFlex>
+            <img class="sphere-logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
+          </li>
+        </ul>
       </div>
 
-      <div class="row">
+      <div class="row" *ngIf="false">
         <div class="tab-content col-md-12">
           <div class="tab-pane fade" id="docker">
             <p>docker docker</p>
@@ -237,28 +222,22 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-12">
-                <div href="#MinistryVision" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <h1 class="blue small">Full automate your infrastructure, deployments and make your
-                    stack portable.</h1>
-                </div>
-              </li>
-            </ul>
+        <ul class="nav nav-tabs blue" fxLayout="row" style="width: 100%; border-radius: 0 0 15px 15px;">
+          <li>
+            <h1 class="small">Fully automate infrastructure, deployments and mobilise your
+              stack portable.</h1>
+          </li>
+        </ul>
 
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="MinistryVision">
-                  <p>MinistryVision MinistryVision</p>
-                </div>
-              </div>
+        <div class="row" *ngIf="false">
+          <div class="tab-content col-md-12">
+            <div class="tab-pane fade" id="MinistryVision">
+              <p>MinistryVision MinistryVision</p>
             </div>
           </div>
         </div>
       </div>
+
       <!-- / Fourth row -->
     </div>
   </div>
@@ -289,24 +268,11 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-12">
-                <div href="#OCIOMission" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <h1 class="green small">
-                    Never engineer with one application in mind: think platform; think framework
-                  </h1>
-                </div>
-              </li>
-            </ul>
-
-            <div class="row">
-
-            </div>
-          </div>
-        </div>
+        <ul class="nav nav-tabs green" fxLayout="row" style="width: 100%; border-radius: 15px 15px 0 0;">
+          <li>
+            <h1 class="small">Never engineer with one application in mind: think platform; think framework</h1>
+          </li>
+        </ul>
       </div>
       <!-- / First row -->
 
@@ -321,69 +287,69 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="fluid-container technology-pillars">
-            <ul class="nav nav-tabs row">
-              <li class="col-md-a col-xs-12 col-sm-12">
-                <div class="inverse-green">
-                  <h2>STORAGE</h2>
-                  <mat-icon class="success-logo">storage</mat-icon>
-                  <br/>
-                  Distributed file systems, databases, caches and queues
-                </div>
-              </li>
-              <li class="col-md-a col-xs-12 col-sm-12">
-                <div class="inverse-green">
-                  <h2>ANDROID</h2>
-                  <mat-icon class="success-logo">android</mat-icon>
-                  <br/>
-                  Native Java development
-                </div>
-              </li>
-              <li class="col-md-a col-xs-12 col-sm-12">
-                <div class="inverse-green">
-                  <h2>iOS</h2>
-                  <mat-icon class="success-logo">phone_iphone</mat-icon>
-                  <br/>
-                  Native Swift development
-                </div>
-              </li>
-              <li class="col-md-a col-xs-12 col-sm-12">
-                <div class="inverse-green">
-                  <h2>WEB</h2>
-                  <mat-icon class="success-logo">web</mat-icon>
-                  <br/>
-                  Angular (TypeScript) development
-                </div>
 
-              </li>
-              <li class="col-md-a col-xs-12 col-sm-12">
-                <div class="inverse-green">
-                  <h2>REST API</h2>
-                  <mat-icon class="success-logo">business</mat-icon>
-                  <br/>
-                  Node.js (TypeScript)<br/>
-                  Python<br/>
-                  C++, Rust, &etc.
-                </div>
-              </li>
-            </ul>
+        <ul class="nav nav-tabs" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayout.xs="column" fxLayoutGap.xs="2px">
+          <li fxFlex>
+            <div class="inverse-green">
+              <h2>STORAGE</h2>
+              <mat-icon class="success-logo">storage</mat-icon>
+              <br/>
+              Distributed file systems, databases, caches and queues
+            </div>
+          </li>
+          <li fxFlex>
+            <div class="inverse-green">
+              <h2>ANDROID</h2>
+              <mat-icon class="success-logo">android</mat-icon>
+              <br/>
+              Native Java development
+            </div>
+          </li>
+          <li fxFlex>
+            <div class="inverse-green">
+              <h2>iOS</h2>
+              <mat-icon class="success-logo">phone_iphone</mat-icon>
+              <br/>
+              Native Swift development
+            </div>
+          </li>
+          <li fxFlex>
+            <div class="inverse-green">
+              <h2>WEB</h2>
+              <mat-icon class="success-logo">web</mat-icon>
+              <br/>
+              Angular (TypeScript) development
+            </div>
 
-            <!-- <div class="row">
-                <div class="tab-content col-md-12">
-                    <div class="tab-pane fade" id="Goal1">
-                        <p></p>
-                    </div>
+          </li>
+          <li fxFlex>
+            <div class="inverse-green">
+              <h2>REST API</h2>
+              <mat-icon class="success-logo">business</mat-icon>
+              <br/>
+              Node.js (TypeScript)<br/>
+              Python<br/>
+              C++, Rust, &etc.
+            </div>
+          </li>
+        </ul>
+
+        <!-- <div class="row">
+            <div class="tab-content col-md-12">
+                <div class="tab-pane fade" id="Goal1">
+                    <p></p>
                 </div>
-            </div> -->
-          </div>
-        </div>
+            </div>
+        </div> -->
+
       </div>
       <!-- / Second row -->
 
       <!-- Third row -->
-      <div class="vertical-wrapper">
-        <div class="left hidden-sm hidden-xs">
+      <div fxLayout="row">
+        <div class="hidden-sm hidden-xs">
           <div class="frame">
             <div class="tab">
               <div class="caption inverse-green">Strategic Goals</div>
@@ -391,77 +357,62 @@
           </div>
         </div>
 
-        <div class="right">
-          <div class="fluid-container strategic-goals">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-3 puzzle puzzle-top">
-                <div href="#EnableDigital" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="puzzle-background dark-green">
-                    <h1 class="puzzle-text">
-                      <img src="../../assets/img/Goal1.png"/><br/>
-                      DECOUPLE
-                    </h1>
-                  </div>
-                  <div class="puzzle-circle white right"></div>
-                  <div class="puzzle-circle dark-green right"></div>
-                </div>
-              </li>
-              <li class="col-md-3 puzzle">
-                <div href="#EngagedWorkforce" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="puzzle-background green">
-                    <h1 class="puzzle-text">
-                      <img src="../../assets/img/Goal2.png"/><br/>
-                      DECOMPOSE
-                    </h1>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-3 puzzle puzzle-top">
-                <div href="#OperationalExcellence" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="puzzle-circle white left"></div>
-                  <div class="puzzle-circle dark-green left"></div>
-                  <div class="puzzle-circle white right"></div>
-                  <div class="puzzle-circle dark-green right"></div>
-                  <div class="puzzle-background dark-green">
-                    <h1 class="puzzle-text">
-                      <img src="../../assets/img/Goal3.png"/><br/>
-                      DEPLOY
-                    </h1>
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-3 puzzle">
-                <div href="#MaximizeValue" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="puzzle-background green">
-                    <h1 class="puzzle-text">
-                      <img src="../../assets/img/Goal4.png"/><br/>
-                      DELIVER
-                    </h1>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="EnableDigital">
-                  <p>EnableDigital EnableDigital</p>
-                </div>
-                <div class="tab-pane fade" id="MaximizeValue">
-                  <p>MaximizeValue MaximizeValue</p>
-                </div>
-                <div class="tab-pane fade" id="EngagedWorkforce">
-                  <p>EngagedWorkforce EngagedWorkforce</p>
-                </div>
-                <div class="tab-pane fade" id="OperationalExcellence">
-                  <p>OperationalExcellence OperationalExcellence</p>
-                </div>
-              </div>
+        <ul class="nav nav-tabs" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayoutGap="0px"
+            fxLayout.xs="column" fxLayoutGap.xs="0px">
+          <li class="puzzle puzzle-top" fxFlex>
+            <div class="puzzle-background dark-green">
+              <h1 class="puzzle-text">
+                <img src="../../assets/img/Goal1.png"/><br/>
+                DECOUPLE
+              </h1>
             </div>
+            <div class="puzzle-circle white right"></div>
+            <div class="puzzle-circle dark-green right"></div>
+          </li>
+          <li class="puzzle" fxFlex>
+            <div class="puzzle-background green">
+              <h1 class="puzzle-text">
+                <img src="../../assets/img/Goal2.png"/><br/>
+                DECOMPOSE
+              </h1>
+            </div>
+          </li>
+          <li class="puzzle puzzle-top" fxFlex>
+            <div class="puzzle-circle white left"></div>
+            <div class="puzzle-circle dark-green left"></div>
+            <div class="puzzle-circle white right"></div>
+            <div class="puzzle-circle dark-green right"></div>
+            <div class="puzzle-background dark-green">
+              <h1 class="puzzle-text">
+                <img src="../../assets/img/Goal3.png"/><br/>
+                DEPLOY
+              </h1>
+            </div>
+          </li>
+          <li class="puzzle" fxFlex>
+            <div class="puzzle-background green">
+              <h1 class="puzzle-text">
+                <img src="../../assets/img/Goal4.png"/><br/>
+                DELIVER
+              </h1>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="false">
+        <div class="tab-content col-md-12">
+          <div class="tab-pane fade" id="EnableDigital">
+            <p>EnableDigital EnableDigital</p>
+          </div>
+          <div class="tab-pane fade" id="MaximizeValue">
+            <p>MaximizeValue MaximizeValue</p>
+          </div>
+          <div class="tab-pane fade" id="EngagedWorkforce">
+            <p>EngagedWorkforce EngagedWorkforce</p>
+          </div>
+          <div class="tab-pane fade" id="OperationalExcellence">
+            <p>OperationalExcellence OperationalExcellence</p>
           </div>
         </div>
       </div>
@@ -470,9 +421,6 @@
     </div>
   </div>
   <!-- / Second content group -->
-
-
-  <!-- Third content group -->
   <div class="vertical-wrapper" id="data_analytics">
     <!-- Left vertical area -->
     <div class="left hidden-sm hidden-xs">
@@ -486,258 +434,146 @@
     <!-- / Left vertical area -->
 
     <!-- First row -->
-    <div class="right core-functions">
+    <div class="right">
       <div class="vertical-wrapper">
         <div class="left hidden-sm hidden-xs">
           <div class="frame">
             <div class="tab">
-              <div class="caption wrap inverse-dark-blue">Core Functions</div>
+              <div class="caption inverse-dark-blue">Core</div>
             </div>
           </div>
         </div>
+
 
         <div class="right">
-          <div class="fluid-container core-functions">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-a">
-                <div href="#TelecommunicationsAndNetwork" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/telecommunications-and-network.png"/><br/>
-                    Recommender systems
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#HostingInfrastructure" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/hosting-infrastructure.png"/><br/>
-                    Search engines
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#DeviceProductivity" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
-                    Artificial Intelligence
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#ServiceDelivery" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/it-service-delivery.png"/><br/>
-                    Natural Language Processing
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#IdentityManagement" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/identity-management.png"/><br/>
-                    Server log investigation
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#CapitalInvestment" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
-                    Multivariate regression
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#PolicyStandards" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/policy-standards-architecture.png"/><br/>
-                    Research focussed (PhD+)
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#StrategyPlanning" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/strategy-planning.png"/><br/>
-                    Report generation
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#InformationSecurity" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/information-security.png"/><br/>
-                    Excel extrapolation
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="TelecommunicationsAndNetwork">
-                  <p>TelecommunicationsAndNetwork TelecommunicationsAndNetwork</p>
-                </div>
-                <div class="tab-pane fade" id="HostingInfrastructure">
-                  <p>HostingInfrastructure HostingInfrastructure</p>
-                </div>
-                <div class="tab-pane fade" id="DeviceProductivity">
-                  <p>DeviceProductivity DeviceProductivity</p>
-                </div>
-                <div class="tab-pane fade" id="ServiceDelivery">
-                  <p>ServiceDelivery ServiceDelivery</p>
-                </div>
-                <div class="tab-pane fade" id="IdentityManagement">
-                  <p>IdentityManagement IdentityManagement</p>
-                </div>
-                <div class="tab-pane fade" id="CapitalInvestment">
-                  <p>CapitalInvestment CapitalInvestment</p>
-                </div>
-                <div class="tab-pane fade" id="PolicyStandards">
-                  <p>PolicyStandards PolicyStandards</p>
-                </div>
-                <div class="tab-pane fade" id="StrategyPlanning">
-                  <p>StrategyPlanning StrategyPlanning</p>
-                </div>
-                <div class="tab-pane fade" id="InformationSecurity">
-                  <p>InformationSecurity InformationSecurity</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- / First row -->
-
-      <!-- Second row -->
-      <div class="vertical-wrapper key-projects">
-        <div class="left hidden-sm hidden-xs">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-dark-blue">Key Projects</div>
-            </div>
-          </div>
+          <ul class="nav nav-tabs" style="width: 100%"
+              fxLayoutAlign="stretch" fxLayoutGap="20px"
+              fxLayout.xs="column" fxLayoutGap.xs="2px">
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
+              Artificial Intelligence
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/it-service-delivery.png"/><br/>
+              Natural Language Processing
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/identity-management.png"/><br/>
+              Server log investigation
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
+              Multivariate regression
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/policy-standards-architecture.png"/><br/>
+              Research focussed (PhD+)
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/strategy-planning.png"/><br/>
+              Report generation
+            </li>
+            <li class="inverse-dark-blue" fxFlex>
+              <img src="../../assets/img/dark-blue/information-security.png"/><br/>
+              Excel extrapolation
+            </li>
+          </ul>
         </div>
 
-        <div class="right">
-          <div class="fluid-container">
-            <ul class="adaptive-tabs nav nav-tabs row">
-              <li class="col-md-a">
-                <div href="#CloudBC" data-toggle="tab" class="js-tabcollapse-panel-heading collapsed"
-                     aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/cloudbc.png"/><br/>
-                    AI dashboard
-                  </div>
+        <!-- <div class="row">
+            <div class="tab-content col-md-12">
+                <div class="tab-pane fade" id="Goal1">
+                    <p></p>
                 </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#DevelopersExchange" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/developers-exchange.png"/><br/>
-                    Convolutional Neural Networks
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#ServiceCentre" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/my-service-centre.png"/><br/>
-                    Dataset merging
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#SevicesCard" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/bc-services-card.png"/><br/>
-                    Predictions
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#MobileDevice" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/mobile-device-management.png"/><br/>
-                    Medical diagnoses
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#NetworkModernization" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/network-modernization.png"/><br/>
-                    Health records
-                  </div>
-                </div>
-              </li>
-              <li class="col-md-a">
-                <div href="#StreamSuccession" data-toggle="tab"
-                     class="js-tabcollapse-panel-heading collapsed" aria-expanded="false">
-                  <div class="inverse-dark-blue">
-                    <img src="../../assets/img/dark-blue/imit-talent.png"/><br/>
-                    Python; R; SQL; Scala; &etc.
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <div class="row">
-              <div class="tab-content col-md-12">
-                <div class="tab-pane fade" id="CloudBC">
-                  <p>Cloud computing offers many benefits including: business agility, better time to
-                    market, fewer operational issues and less capital expense.</p>
-                </div>
-                <div class="tab-pane fade" id="DevelopersExchange">
-                  <p>DevelopersExchange DevelopersExchange</p>
-                </div>
-                <div class="tab-pane fade" id="ServiceCentre">
-                  <p>ServiceCentre ServiceCentre</p>
-                </div>
-                <div class="tab-pane fade" id="SevicesCard">
-                  <p>SevicesCard SevicesCard</p>
-                </div>
-                <div class="tab-pane fade" id="MobileDevice">
-                  <p>MobileDevice MobileDevice</p>
-                </div>
-                <div class="tab-pane fade" id="NetworkModernization">
-                  <p>NetworkModernization NetworkModernization</p>
-                </div>
-                <div class="tab-pane fade" id="StreamSuccession">
-                  <p>StreamSuccession StreamSuccession</p>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
+        </div> -->
+
       </div>
       <!-- / Second row -->
 
+      <!-- Third row -->
+      <div fxLayout="row">
+        <div class="hidden-sm hidden-xs">
+          <div class="frame">
+            <div class="tab">
+              <div class="caption inverse-dark-blue">Offerings</div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="nav nav-tabs" style="width: 100%"
+            fxLayoutAlign="stretch" fxLayoutGap="0px"
+            fxLayout.xs="column" fxLayoutGap.xs="0px">
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/cloudbc.png"/><br/>
+            AI dashboard
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/developers-exchange.png"/><br/>
+            Convolutional Neural Networks
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/my-service-centre.png"/><br/>
+            Dataset merging
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/bc-services-card.png"/><br/>
+            Predictions
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/mobile-device-management.png"/><br/>
+            Medical diagnoses
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/network-modernization.png"/><br/>
+            Health records
+          </li>
+          <li class="inverse-dark-blue" fxFlex>
+            <img src="../../assets/img/dark-blue/imit-talent.png"/><br/>
+            Python; R; SQL; Scala; &etc.
+          </li>
+        </ul>
+      </div>
+      <div class="row" *ngIf="false">
+        <div class="tab-content col-md-12">
+          <div class="tab-pane fade" id="CloudBC">
+            <p>Cloud computing offers many benefits including: business agility, better time to
+              market, fewer operational issues and less capital expense.</p>
+          </div>
+          <div class="tab-pane fade" id="DevelopersExchange">
+            <p>DevelopersExchange DevelopersExchange</p>
+          </div>
+          <div class="tab-pane fade" id="ServiceCentre">
+            <p>ServiceCentre ServiceCentre</p>
+          </div>
+          <div class="tab-pane fade" id="SevicesCard">
+            <p>SevicesCard SevicesCard</p>
+          </div>
+          <div class="tab-pane fade" id="MobileDevice">
+            <p>MobileDevice MobileDevice</p>
+          </div>
+          <div class="tab-pane fade" id="NetworkModernization">
+            <p>NetworkModernization NetworkModernization</p>
+          </div>
+          <div class="tab-pane fade" id="StreamSuccession">
+            <p>StreamSuccession StreamSuccession</p>
+          </div>
+        </div>
+      </div>
+      <!-- / Third row -->
+
     </div>
   </div>
-  <!-- / Second content group -->
 </div>
 
 
 <div id="footer">
-  <a (click)="w.scrollTo({top: 0, left: 0, behaviour: smooth})"><img src="../../assets/img/extra/back-to-top.png"
-                                                                     alt="Back to top" title="Back to top"
-                                                                     class="back-to-top footer-overlap"
-                                                                     style="display: block;"></a>
+  <a (click)="scrollToTop()">
+    <img src="../../assets/img/extra/back-to-top.png"
+         alt="Back to top" title="Back to top"
+         class="back-to-top footer-overlap"
+         style="display: block;">
+  </a>
   <div id="footerWrapper">
     <div id="footerAdminSection">
       <div id="footerAdminLinksContainer" class="container">
