@@ -357,17 +357,15 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs"
-            fxLayoutGap="0px"
-            fxLayout.xs="column" fxLayoutGap.xs="0px">
+        <ul class="nav nav-tabs" fxLayout.xs="column">
           <li class="puzzle puzzle-top" fxFlex>
             <div class="puzzle-background dark-green goal1">
               <h1 class="puzzle-text">
                 DECOUPLE
               </h1>
             </div>
-            <div class="puzzle-circle white right"></div>
-            <div class="puzzle-circle dark-green right"></div>
+            <div class="puzzle-circle white right" fxShow.xs="false"></div>
+            <div class="puzzle-circle dark-green right" fxShow.xs="false"></div>
           </li>
           <li class="puzzle" fxFlex>
             <div class="puzzle-background green goal2">
@@ -377,10 +375,12 @@
             </div>
           </li>
           <li class="puzzle puzzle-top" fxFlex>
-            <div class="puzzle-circle white left"></div>
-            <div class="puzzle-circle dark-green left"></div>
-            <div class="puzzle-circle white right"></div>
-            <div class="puzzle-circle dark-green right"></div>
+            <div fxShow.xs="false">
+              <div class="puzzle-circle white left"></div>
+              <div class="puzzle-circle dark-green left"></div>
+              <div class="puzzle-circle white right"></div>
+              <div class="puzzle-circle dark-green right"></div>
+            </div>
             <div class="puzzle-background dark-green goal3">
               <h1 class="puzzle-text">
                 DEPLOY
@@ -451,10 +451,6 @@
             Natural Language Processing
           </li>
           <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/identity-management.png"/><br/>
-            Server log investigation
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
             <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
             Multivariate regression
           </li>
@@ -514,10 +510,6 @@
           <li class="inverse-dark-blue" fxFlex>
             <img src="../../assets/img/dark-blue/mobile-device-management.png"/><br/>
             Medical diagnoses
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/network-modernization.png"/><br/>
-            Health records
           </li>
           <li class="inverse-dark-blue" fxFlex>
             <img src="../../assets/img/dark-blue/imit-talent.png"/><br/>
