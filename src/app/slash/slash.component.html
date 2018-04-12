@@ -70,7 +70,7 @@
     <!-- / Left vertical area -->
 
     <!-- First row -->
-    <div class="right">
+    <div style="width: 100%">
       <div class="vertical-wrapper">
         <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
@@ -81,30 +81,29 @@
         </div>
 
         <ul class="nav nav-tabs"
-            fxLayoutAlign="stretch" fxLayoutGap="20px"
-            fxLayout.xs="column" fxLayoutGap.xs="1px">
+            fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li (click)="multicloud = 'aws'" fxFlex>
-            <img class="svg cloud-logo hidden-xs hidden-sm"
+            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false"
                  src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
             <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
           </li>
           <li (click)="multicloud = 'azure'" fxFlex>
-            <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/azure.svg"/>
+            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false" src="../../assets/img/logos/azure.svg"/>
             <h1 class="inverse-blue">Microsoft Azure</h1>
           </li>
           <li (click)="multicloud = 'ibm'" fxFlex>
-            <img class="svg cloud-logo hidden-xs hidden-sm" src="../../assets/img/logos/ibm_cloud.png"/>
+            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false" src="../../assets/img/logos/ibm_cloud.png"/>
             <h1 class="inverse-blue">IBM Cloud</h1>
           </li>
           <li (click)="multicloud = 'clouds'" fxFlex>
-            <img class="svg cloud-logo hidden-xs hidden-sm"
+            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false"
                  src="../../assets/img/logos/mesosphere.svg"/>
             <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
           </li>
         </ul>
       </div>
-      <div class="row" *ngIf="multicloud">
-        <div class="col-md-12">
+      <div *ngIf="multicloud">
+        <div>
           <div *ngIf="multicloud === 'aws'">
             <p>AWS is awesome because</p>
           </div>
@@ -132,8 +131,7 @@
         </div>
 
         <ul class="nav nav-tabs circle-parent"
-            fxLayoutAlign="stretch" fxLayoutGap="20px"
-            fxLayout.xs="column" fxLayoutGap.xs="2px">
+            fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li (click)="approach = 'devops'" class="inverse-blue dashed-border"
               fxFlex>
             <h1>Goal 1<br/>Automate infrastructure deployment
@@ -151,7 +149,7 @@
         </ul>
       </div>
 
-      <div class="row" *ngIf="approach">
+      <div *ngIf="approach">
         <div class="col-md-12">
           <div *ngIf="approach === 'devops'">
             <p>devops devops</p>
@@ -167,6 +165,7 @@
       <!-- / Second row -->
 
       <!-- Third row -->
+
       <div class="vertical-wrapper">
         <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
@@ -175,27 +174,27 @@
             </div>
           </div>
         </div>
-
-        <ul class="nav nav-tabs circle-parent"
-            fxLayoutAlign="stretch" fxLayout="row" fxLayoutGap="20px"
-            fxLayout.xs="column" fxLayoutGap.xs="2px">
-          <li fxFlex>
-            <img class="sphere-logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
-          </li>
-          <li fxFlex>
-            <img class="sphere-logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
-          </li>
-          <li fxFlex>
-            <img class="sphere-logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
-          </li>
-          <li fxFlex>
-            <img class="sphere-logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
-          </li>
-        </ul>
+        <div style="width: 100%">
+          <ul class="nav nav-tabs circle-parent"
+              fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
+            <li fxFlex>
+              <img class="logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
+            </li>
+            <li fxFlex>
+              <img class="logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
+            </li>
+            <li fxFlex>
+              <img class="logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
+            </li>
+            <li fxFlex>
+              <img class="logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="row" *ngIf="false">
-        <div class="tab-content col-md-12">
+      <div *ngIf="false">
+        <div class="tab-content">
           <div class="tab-pane fade" id="docker">
             <p>docker docker</p>
           </div>
@@ -230,8 +229,8 @@
           </li>
         </ul>
 
-        <div class="row" *ngIf="false">
-          <div class="tab-content col-md-12">
+        <div *ngIf="false">
+          <div class="tab-content">
             <div class="tab-pane fade" id="MinistryVision">
               <p>MinistryVision MinistryVision</p>
             </div>
@@ -259,7 +258,7 @@
     <!-- / Left vertical area -->
 
     <!-- First row -->
-    <div class="right">
+    <div style="width: 100%">
       <div class="vertical-wrapper ocio-mission">
         <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
@@ -290,7 +289,7 @@
 
 
         <ul class="nav nav-tabs"
-            fxLayoutAlign="stretch" fxLayoutGap="20px"
+            fxLayoutGap="20px"
             fxLayout.xs="column" fxLayoutGap.xs="2px">
           <li fxFlex>
             <div class="inverse-green">
@@ -337,8 +336,8 @@
           </li>
         </ul>
 
-        <!-- <div class="row">
-            <div class="tab-content col-md-12">
+        <!-- <div >
+            <div class="tab-content">
                 <div class="tab-pane fade" id="Goal1">
                     <p></p>
                 </div>
@@ -359,12 +358,11 @@
         </div>
 
         <ul class="nav nav-tabs"
-            fxLayoutAlign="stretch" fxLayoutGap="0px"
+            fxLayoutGap="0px"
             fxLayout.xs="column" fxLayoutGap.xs="0px">
           <li class="puzzle puzzle-top" fxFlex>
-            <div class="puzzle-background dark-green">
+            <div class="puzzle-background dark-green goal1">
               <h1 class="puzzle-text">
-                <img src="../../assets/img/Goal1.png"/><br/>
                 DECOUPLE
               </h1>
             </div>
@@ -372,9 +370,8 @@
             <div class="puzzle-circle dark-green right"></div>
           </li>
           <li class="puzzle" fxFlex>
-            <div class="puzzle-background green">
+            <div class="puzzle-background green goal2">
               <h1 class="puzzle-text">
-                <img src="../../assets/img/Goal2.png"/><br/>
                 DECOMPOSE
               </h1>
             </div>
@@ -384,17 +381,15 @@
             <div class="puzzle-circle dark-green left"></div>
             <div class="puzzle-circle white right"></div>
             <div class="puzzle-circle dark-green right"></div>
-            <div class="puzzle-background dark-green">
+            <div class="puzzle-background dark-green goal3">
               <h1 class="puzzle-text">
-                <img src="../../assets/img/Goal3.png"/><br/>
                 DEPLOY
               </h1>
             </div>
           </li>
           <li class="puzzle" fxFlex>
-            <div class="puzzle-background green">
+            <div class="puzzle-background green goal4">
               <h1 class="puzzle-text">
-                <img src="../../assets/img/Goal4.png"/><br/>
                 DELIVER
               </h1>
             </div>
@@ -402,7 +397,7 @@
         </ul>
       </div>
       <div *ngIf="false">
-        <div class="tab-content col-md-12">
+        <div class="tab-content">
           <div class="tab-pane fade" id="EnableDigital">
             <p>EnableDigital EnableDigital</p>
           </div>
@@ -435,7 +430,7 @@
     <!-- / Left vertical area -->
 
     <!-- First row -->
-    <div class="right">
+    <div style="width: 100%">
       <div class="vertical-wrapper">
         <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
@@ -446,9 +441,7 @@
         </div>
 
 
-        <ul class="nav nav-tabs"
-            fxLayoutAlign="stretch" fxLayoutGap="20px"
-            fxLayout.xs="column" fxLayoutGap.xs="2px">
+        <ul class="nav nav-tabs" fxLayout.xs="column">
           <li class="inverse-dark-blue" fxFlex>
             <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
             Artificial Intelligence
@@ -479,8 +472,8 @@
           </li>
         </ul>
 
-        <!-- <div class="row">
-            <div class="tab-content col-md-12">
+        <!-- <div >
+            <div class="tab-content">
                 <div class="tab-pane fade" id="Goal1">
                     <p></p>
                 </div>
@@ -500,11 +493,9 @@
           </div>
         </div>
 
-        <ul class="nav nav-tabs"
-            fxLayoutAlign="stretch" fxLayoutGap="0px"
-            fxLayout.xs="column" fxLayoutGap.xs="0px">
+        <ul class="nav nav-tabs" fxLayout.xs="column">
           <li class="inverse-dark-blue" fxFlex>
-            <mat-icon class="success-logo">dashboard</mat-icon>
+            <mat-icon style="font-size: 3em">dashboard</mat-icon>
             <br>
             AI dashboard
           </li>
@@ -534,8 +525,8 @@
           </li>
         </ul>
       </div>
-      <div class="row" *ngIf="false">
-        <div class="tab-content col-md-12">
+      <div *ngIf="false">
+        <div class="tab-content">
           <div class="tab-pane fade" id="CloudBC">
             <p>Cloud computing offers many benefits including: business agility, better time to
               market, fewer operational issues and less capital expense.</p>
@@ -577,7 +568,7 @@
   <div id="footerWrapper">
     <div id="footerAdminSection">
       <div id="footerAdminLinksContainer" class="container">
-        <div id="footerAdminLinks" class="row">
+        <div id="footerAdminLinks">
           <ul class="inline">
             <li>
               <a routerLink="/">Home</a>
