@@ -53,526 +53,72 @@
       data analytics
     </button>
   </div>
+  <button class="btn primary-color"
+          fxFlex style="text-transform: uppercase; border-radius: 0 0 15px 15px"
+          (click)="scrollToId('#case_studies')">
+    case studies
+  </button>
 </div>
 
-<div class="main-content">
-  <!-- First content group -->
-  <div class="vertical-wrapper" id="cloud_and_auto">
-    <!-- Left vertical area -->
-    <div fxShow.sm="false" fxShow.xs="false">
-      <div class="frame">
-        <div class="tab blue">
-          <div class="tab-rounded"></div>
-          <div class="caption"><h3><b>Cloud</b> migration &amp; infrastructure automation</h3></div>
-        </div>
-      </div>
-    </div>
-    <!-- / Left vertical area -->
-
-    <!-- First row -->
-    <div style="width: 100%">
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-blue">Multicloud</div>
-            </div>
-          </div>
-        </div>
-
-        <ul class="nav nav-tabs"
-            fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
-          <li (click)="multicloud = 'aws'" fxFlex>
-            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false"
-                 src="../../assets/img/logos/Amazon_Web_Services_Logo.svg"/>
-            <h1 class="inverse-blue">Amazon Web Services (AWS)</h1>
-          </li>
-          <li (click)="multicloud = 'azure'" fxFlex>
-            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false" src="../../assets/img/logos/azure.svg"/>
-            <h1 class="inverse-blue">Microsoft Azure</h1>
-          </li>
-          <li (click)="multicloud = 'ibm'" fxFlex>
-            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false" src="../../assets/img/logos/ibm_cloud.png"/>
-            <h1 class="inverse-blue">IBM Cloud</h1>
-          </li>
-          <li (click)="multicloud = 'clouds'" fxFlex>
-            <img class="svg cloud-logo" fxShow.sm="false" fxShow.xs="false"
-                 src="../../assets/img/logos/mesosphere.svg"/>
-            <h1 class="inverse-blue">50+ others (public &amp; private)</h1>
-          </li>
-        </ul>
-      </div>
-      <div *ngIf="multicloud">
-        <div>
-          <div *ngIf="multicloud === 'aws'">
-            <p>AWS is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'azure'">
-            <p>Azure is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'ibm'">
-            <p>IBM is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'clouds'">
-            <p>OpenStack is just one of the >50 others we support</p>
-          </div>
-        </div>
-      </div>
-      <!-- First row | 100 hours; -->
-
-      <!-- Second row -->
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-blue">Approach</div>
-            </div>
-          </div>
-        </div>
-
-        <ul class="nav nav-tabs circle-parent"
-            fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
-          <li (click)="approach = 'devops'" class="inverse-blue dashed-border"
-              fxFlex>
-            <h1>Goal 1<br/>Automate infrastructure deployment
-              (DevOps)</h1>
-          </li>
-          <li (click)="approach = 'rebuild_apps'" class="inverse-blue dashed-border"
-              fxFlex>
-            <h1>Goal 2<br/>Upgrade applications to
-              'cloud-native'</h1>
-          </li>
-          <li (click)="approach = 'elastic'" class="inverse-blue dashed-border"
-              fxFlex>
-            <h1>Goal 3<br/>Elastic scaling</h1>
-          </li>
-        </ul>
-      </div>
-
-      <div *ngIf="approach">
-        <div class="col-md-12">
-          <div *ngIf="approach === 'devops'">
-            <p>devops devops</p>
-          </div>
-          <div *ngIf="approach === 'rebuild_apps'">
-            <p>rebuild_apps rebuild_apps</p>
-          </div>
-          <div *ngIf="approach === 'elastic'">
-            <p>elastic elastic</p>
-          </div>
-        </div>
-      </div>
-      <!-- / Second row -->
-
-      <!-- Third row -->
-
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption wrap inverse-blue">Key technologies</div>
-            </div>
-          </div>
-        </div>
-        <div style="width: 100%">
-          <ul class="nav nav-tabs circle-parent"
-              fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="2px">
-            <li fxFlex>
-              <img class="logo" src="../../assets/img/logos/docker.png" alt="Docker"/>
-            </li>
-            <li fxFlex>
-              <img class="logo" src="../../assets/img/logos/mesosphere.svg" alt="Mesosphere DC/OS">
-            </li>
-            <li fxFlex>
-              <img class="logo" src="../../assets/img/logos/etcd-logo.png" alt="etcd">
-            </li>
-            <li fxFlex>
-              <img class="logo" src="../../assets/img/logos/github.png" alt="github.com/offscale">
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div *ngIf="false">
-        <div class="tab-content">
-          <div class="tab-pane fade" id="docker">
-            <p>docker docker</p>
-          </div>
-          <div class="tab-pane fade" id="dcos">
-            <p>dcos dcos</p>
-          </div>
-          <div class="tab-pane fade" id="EngagePeople">
-            <p>EngagePeople EngagePeople</p>
-          </div>
-          <div class="tab-pane fade" id="github">
-            <p>github github</p>
-          </div>
-        </div>
-      </div>
-      <!-- / Third row -->
+<app-infographic></app-infographic>
 
 
-      <!-- Fourth row -->
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption wrap inverse-blue">Philosophy</div>
-            </div>
-          </div>
-        </div>
+<div style="padding: 20px" id="case_studies">
+  <h1>Case studies</h1>
 
-        <ul class="nav nav-tabs blue" fxLayout="row" style="border-radius: 0 0 15px 15px;">
-          <li>
-            <h1 class="small">Fully automate infrastructure, deployments and mobilise your
-              stack portable.</h1>
-          </li>
-        </ul>
+  <vertical-tabs [multi]="true" [selectFirstTab]="false">
+    <vertical-tab tabTitle="Finance">
+      <h3>Stock market analytics platform</h3>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt mattis neque lacinia dignissim. Morbi ex
+      orci, bibendum et varius vel, porttitor et magna.
 
-        <div *ngIf="false">
-          <div class="tab-content">
-            <div class="tab-pane fade" id="MinistryVision">
-              <p>MinistryVision MinistryVision</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h3>User deidentified deduplication</h3>
+      Sed dictum, diam et vehicula sollicitudin, eros orci viverra diam, et pretium risus nisl eget ex. Integer lacinia
+      commodo ipsum, sit amet consectetur magna hendrerit eu.
+    </vertical-tab>
 
-      <!-- / Fourth row -->
-    </div>
-  </div>
-  <!-- / First content group -->
+    <vertical-tab tabTitle="Social networking">
+      <h3>Social networking and analytics</h3>
+      Curabitur efficitur eleifend nulla, eget porta diam sodales in. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Maecenas vestibulum libero lacus, et porta ex tincidunt quis.
+    </vertical-tab>
 
+    <vertical-tab tabTitle="Cloud computing">
+      <h3>OrionVM</h3>
+      Sed dictum, diam et vehicula sollicitudin, eros orci viverra diam, et pretium risus nisl eget ex. Integer lacinia
+      commodo ipsum, sit amet consectetur magna hendrerit eu.
 
-  <!-- Second content group -->
-  <div class="vertical-wrapper" id="software_engineering">
-    <!-- Left vertical area -->
-    <div fxShow.sm="false" fxShow.xs="false">
-      <div class="frame">
-        <div class="tab green">
-          <div class="tab-rounded"></div>
-          <div class="caption"><h3>Scalable software development</h3></div>
-        </div>
-      </div>
-    </div>
-    <!-- / Left vertical area -->
+      <h3>Offscale</h3>
+      Sed dictum, diam et vehicula sollicitudin, eros orci viverra diam, et pretium risus nisl eget ex. Integer lacinia
+      commodo ipsum, sit amet consectetur magna hendrerit eu.
 
-    <!-- First row -->
-    <div style="width: 100%">
-      <div class="vertical-wrapper ocio-mission">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption wrap inverse-green">Idea</div>
-            </div>
-          </div>
-        </div>
+      <h3>Telstra</h3>
+      Sed dictum, diam et vehicula sollicitudin, eros orci viverra diam, et pretium risus nisl eget ex. Integer lacinia
+      commodo ipsum, sit amet consectetur magna hendrerit eu.
+    </vertical-tab>
 
-        <ul class="nav nav-tabs green" fxLayout="row" style="border-radius: 15px 15px 0 0;">
-          <li>
-            <h1 class="small">Never engineer with one application in mind: think platform; think framework</h1>
-          </li>
-        </ul>
-      </div>
-      <!-- / First row -->
+    <vertical-tab tabTitle="News">
+      <h3>Abbrevi8</h3>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt mattis neque lacinia dignissim. Morbi ex
+      orci, bibendum et varius vel, porttitor et magna.
+    </vertical-tab>
 
+    <vertical-tab tabTitle="Medical">
+      <h3>Ophthalmology: glaucoma AI</h3>
+      Curabitur efficitur eleifend nulla, eget porta diam sodales in. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Maecenas vestibulum libero lacus, et porta ex tincidunt quis.
 
-      <!-- Second row -->
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-green">Full-stack</div>
-            </div>
-          </div>
-        </div>
+      <h3>Surgical streaming</h3>
+      Curabitur efficitur eleifend nulla, eget porta diam sodales in. Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Maecenas vestibulum libero lacus, et porta ex tincidunt quis.
+    </vertical-tab>
 
-
-        <ul class="nav nav-tabs"
-            fxLayoutGap="20px"
-            fxLayout.xs="column" fxLayoutGap.xs="2px">
-          <li fxFlex>
-            <div class="inverse-green">
-              <h2>STORAGE</h2>
-              <mat-icon class="success-logo">storage</mat-icon>
-              <br/>
-              Distributed file systems, databases, caches and queues
-            </div>
-          </li>
-          <li fxFlex>
-            <div class="inverse-green">
-              <h2>ANDROID</h2>
-              <mat-icon class="success-logo">android</mat-icon>
-              <br/>
-              Native Java development
-            </div>
-          </li>
-          <li fxFlex>
-            <div class="inverse-green">
-              <h2>iOS</h2>
-              <mat-icon class="success-logo">phone_iphone</mat-icon>
-              <br/>
-              Native Swift development
-            </div>
-          </li>
-          <li fxFlex>
-            <div class="inverse-green">
-              <h2>WEB</h2>
-              <i class="devicon-angularjs-plain success-logo"></i>
-              <br/>
-              Angular (TypeScript) development
-            </div>
-
-          </li>
-          <li fxFlex>
-            <div class="inverse-green">
-              <h2>REST API</h2>
-              <i class="devicon-nodejs-plain success-logo"></i>
-              <br/>
-              Node.js;<br/>
-              Python;<br/>
-              C++; Rust; &etc.
-            </div>
-          </li>
-        </ul>
-
-        <!-- <div >
-            <div class="tab-content">
-                <div class="tab-pane fade" id="Goal1">
-                    <p></p>
-                </div>
-            </div>
-        </div> -->
-
-      </div>
-      <!-- / Second row -->
-
-      <!-- Third row -->
-      <div fxLayout="row">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-green">Strategic Goals</div>
-            </div>
-          </div>
-        </div>
-
-        <ul class="nav nav-tabs" fxLayout.xs="column">
-          <li class="puzzle puzzle-top" fxFlex>
-            <div class="puzzle-background dark-green goal1">
-              <h1 class="puzzle-text">
-                DECOUPLE
-              </h1>
-            </div>
-            <div class="puzzle-circle white right" fxShow.xs="false"></div>
-            <div class="puzzle-circle dark-green right" fxShow.xs="false"></div>
-          </li>
-          <li class="puzzle" fxFlex>
-            <div class="puzzle-background green goal2">
-              <h1 class="puzzle-text">
-                DECOMPOSE
-              </h1>
-            </div>
-          </li>
-          <li class="puzzle puzzle-top" fxFlex>
-            <div fxShow.xs="false">
-              <div class="puzzle-circle white left"></div>
-              <div class="puzzle-circle dark-green left"></div>
-              <div class="puzzle-circle white right"></div>
-              <div class="puzzle-circle dark-green right"></div>
-            </div>
-            <div class="puzzle-background dark-green goal3">
-              <h1 class="puzzle-text">
-                DEPLOY
-              </h1>
-            </div>
-          </li>
-          <li class="puzzle" fxFlex>
-            <div class="puzzle-background green goal4">
-              <h1 class="puzzle-text">
-                DELIVER
-              </h1>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div *ngIf="false">
-        <div class="tab-content">
-          <div class="tab-pane fade" id="EnableDigital">
-            <p>EnableDigital EnableDigital</p>
-          </div>
-          <div class="tab-pane fade" id="MaximizeValue">
-            <p>MaximizeValue MaximizeValue</p>
-          </div>
-          <div class="tab-pane fade" id="EngagedWorkforce">
-            <p>EngagedWorkforce EngagedWorkforce</p>
-          </div>
-          <div class="tab-pane fade" id="OperationalExcellence">
-            <p>OperationalExcellence OperationalExcellence</p>
-          </div>
-        </div>
-      </div>
-      <!-- / Third row -->
-
-    </div>
-  </div>
-  <!-- / Second content group -->
-  <div class="vertical-wrapper" id="data_analytics">
-    <!-- Left vertical area -->
-    <div fxShow.sm="false" fxShow.xs="false">
-      <div class="frame">
-        <div class="tab dark-blue">
-          <div class="tab-rounded"></div>
-          <div class="caption"><h3>Data analytics</h3></div>
-        </div>
-      </div>
-    </div>
-    <!-- / Left vertical area -->
-
-    <!-- First row -->
-    <div style="width: 100%">
-      <div class="vertical-wrapper">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-dark-blue">Core</div>
-            </div>
-          </div>
-        </div>
-
-
-        <ul class="nav nav-tabs" fxLayout.xs="column">
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/devices-and-productivity.png"/><br/>
-            Artificial Intelligence
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/it-service-delivery.png"/><br/>
-            Natural Language Processing
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/imit-capital-investment.png"/><br/>
-            Multivariate regression
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/policy-standards-architecture.png"/><br/>
-            Research focussed (PhD+)
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/strategy-planning.png"/><br/>
-            Report generation
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/information-security.png"/><br/>
-            Excel extrapolation
-          </li>
-        </ul>
-
-        <!-- <div >
-            <div class="tab-content">
-                <div class="tab-pane fade" id="Goal1">
-                    <p></p>
-                </div>
-            </div>
-        </div> -->
-
-      </div>
-      <!-- / Second row -->
-
-      <!-- Third row -->
-      <div fxLayout="row">
-        <div fxShow.sm="false" fxShow.xs="false">
-          <div class="frame">
-            <div class="tab">
-              <div class="caption inverse-dark-blue">Offerings</div>
-            </div>
-          </div>
-        </div>
-
-        <ul class="nav nav-tabs" fxLayout.xs="column">
-          <li class="inverse-dark-blue" fxFlex>
-            <mat-icon style="font-size: 3em">dashboard</mat-icon>
-            <br>
-            AI dashboard
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/developers-exchange.png"/><br/>
-            Convolutional Neural Networks
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/my-service-centre.png"/><br/>
-            Dataset merging
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/bc-services-card.png"/><br/>
-            Predictions
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/mobile-device-management.png"/><br/>
-            Medical diagnoses
-          </li>
-          <li class="inverse-dark-blue" fxFlex>
-            <img src="../../assets/img/dark-blue/imit-talent.png"/><br/>
-            Python; R; SQL; Scala; &etc.
-          </li>
-        </ul>
-      </div>
-      <div *ngIf="false">
-        <div class="tab-content">
-          <div class="tab-pane fade" id="CloudBC">
-            <p>Cloud computing offers many benefits including: business agility, better time to
-              market, fewer operational issues and less capital expense.</p>
-          </div>
-          <div class="tab-pane fade" id="DevelopersExchange">
-            <p>DevelopersExchange DevelopersExchange</p>
-          </div>
-          <div class="tab-pane fade" id="ServiceCentre">
-            <p>ServiceCentre ServiceCentre</p>
-          </div>
-          <div class="tab-pane fade" id="SevicesCard">
-            <p>SevicesCard SevicesCard</p>
-          </div>
-          <div class="tab-pane fade" id="MobileDevice">
-            <p>MobileDevice MobileDevice</p>
-          </div>
-          <div class="tab-pane fade" id="NetworkModernization">
-            <p>NetworkModernization NetworkModernization</p>
-          </div>
-          <div class="tab-pane fade" id="StreamSuccession">
-            <p>StreamSuccession StreamSuccession</p>
-          </div>
-        </div>
-      </div>
-      <!-- / Third row -->
-
-    </div>
-  </div>
-</div>
-
-
-<div id="footer">
-  <a (click)="scrollToTop()">
-    <img src="../../assets/img/extra/back-to-top.png"
-         alt="Back to top" title="Back to top"
-         class="back-to-top footer-overlap"
-         style="display: block;">
-  </a>
-  <div id="footerWrapper">
-    <div id="footerAdminSection">
-      <div id="footerAdminLinksContainer" class="container">
-        <div id="footerAdminLinks">
-          <ul class="inline">
-            <li>
-              <a routerLink="/">Home</a>
-            </li>
-            <li>
-              <a routerLink="docs/getting-started">Getting started</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <vertical-tab tabTitle="Education">
+      <h3>Sydney Eye Hospital / Westmead Hosptial / Royal North Shore Hospital / University of Sydney</h3>
+      Sed dictum, diam et vehicula sollicitudin, eros orci viverra diam, et pretium risus nisl eget ex. Integer lacinia
+      commodo ipsum, sit amet consectetur magna hendrerit eu.
+    </vertical-tab>
+  </vertical-tabs>
 </div>
 
 <!--

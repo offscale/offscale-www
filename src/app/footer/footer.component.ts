@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  scrollToTop() {
+    document.getElementsByTagName('app-navbar')[0].scrollIntoView({behavior: 'smooth'});
+  }
 
   constructor() {
   }
 
   ngOnInit() {
   }
-
 }

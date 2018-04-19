@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
+    "angular-vertical-tabs": "github:SamuelMarks/angular-vertical-tabs",
     "core-js": "^2.5.5",
     "devicon": "^2.0.0",
     "rxjs": "^5.5.9",

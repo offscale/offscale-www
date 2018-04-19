@@ -823,6 +823,10 @@ caption {
   .btn-group > .btn {
     border-radius: 5px 5px 5px 5px !important;
   }
+
+  .btn-group > .btn:nth-child(1) {
+    border-radius: 15px 15px 0 0 !important;
+  }
 }
 
 .center-block {

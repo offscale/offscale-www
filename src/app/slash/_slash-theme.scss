@@ -14,6 +14,11 @@
       color: mat-color($primary, default-contrast);
     }
 
+    .primary-color {
+      @extend .docs-footer;
+      color: mat-color($primary, default-contrast) !important;
+    }
+
     .docs-header-start {
       color: mat-color($primary);
     }
@@ -23,6 +28,10 @@
     }
     .mat-icon {
       width: auto;
+    }
+
+    .mat-list, .mat-nav-list, .mat-selection-list {
+      background-color: #00AAC4;
     }
   }
 }

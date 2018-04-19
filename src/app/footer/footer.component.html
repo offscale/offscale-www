@@ -1,3 +1,21 @@
+<div id="footer">
+  <div id="footerAdminSection">
+    <ul class="inline">
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a routerLink="docs/getting-started">Getting started</a>
+      </li>
+    </ul>
+    <div id="infoi">
+      <img (click)="scrollToTop()"
+        src="../../assets/img/extra/back-to-top.png"
+        alt="Back to top" title="Back to top"/>
+    </div>
+  </div>
+</div>
+
 <footer class="docs-footer">
   <div class="docs-footer-list">
     <div class="footer-logo">
@@ -13,8 +31,8 @@
       </a>
       <a href="mailto:samuel@offscale.io" aria-label="Email">
         <img class="docs-footer-angular-logo"
-          src="assets/img/logos/gmail.svg"
-          alt="email"/>
+             src="assets/img/logos/gmail.svg"
+             alt="email"/>
       </a>
       &emsp;
     </div>
