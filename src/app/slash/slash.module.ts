@@ -18,7 +18,7 @@ import { slashRoutes } from './slash.routes';
     MatTabsModule,
     FlexLayoutModule,
     InfographicModule,
-    TabsModule
+    TabsModule.forRoot()
   ],
   declarations: [SlashComponent]
 })
