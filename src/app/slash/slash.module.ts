@@ -9,6 +9,7 @@ import { InfographicModule } from '../infographic/infographic.module';
 
 import { SlashComponent } from './slash.component';
 import { slashRoutes } from './slash.routes';
+import { SvgViewerModule } from '../svg-viewer/svg-viewer.module';
 
 
 
@@ -17,6 +18,7 @@ import { slashRoutes } from './slash.routes';
     CommonModule, RouterModule, RouterModule.forChild(slashRoutes),
     MatTabsModule,
     FlexLayoutModule,
+    SvgViewerModule,
     InfographicModule,
     TabsModule.forRoot()
   ],

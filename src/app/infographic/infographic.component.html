@@ -45,26 +45,85 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="multicloud">
-        <div>
-          <div *ngIf="multicloud === 'aws'">
-            <p>AWS is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'azure'">
-            <p>Azure is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'ibm'">
-            <p>IBM is awesome because</p>
-          </div>
-          <div *ngIf="multicloud === 'clouds'">
-            <p>OpenStack is just one of the >50 others we support</p>
-          </div>
+      <div class="left-margin" *ngIf="multicloud">
+        <div *ngIf="multicloud === 'aws'" [@fade]>
+          <p>AWS is the most popular cloud provider. We fully support usage of AWS services, however have a preference
+            for using EC2 nodes over there more managed services. Advantages: stack is portable between cloud
+            providers; extensibility; and optimised data locality (especially useful for data analytics).</p>
+        </div>
+        <div *ngIf="multicloud === 'azure'" [@fade]>
+          <p>Azure&mdash;like Amazon and IBM&mdash;have a huge number of datacentres and features. Some of their
+            significant internals are based on Mesosphere (you can see <a
+              href="https://www.youtube.com/watch?v=AwniOpsMP4E" target="_blank">their CTO speaking here</a>).</p>
+        </div>
+        <div *ngIf="multicloud === 'ibm'" [@fade]>
+          <p>IBM's offering is particularly useful for data analytics workloads, as they don't charge for inter-node
+            communication (including across datacentres).</p>
+        </div>
+        <div *ngIf="multicloud === 'clouds'" [@fade]>
+          <p>OpenStack is just one of the >50 public and private cloud providers we support. Full list follows.</p>
+
+          <mat-grid-list [cols]="cols | async" rowHeight="25">
+            <mat-grid-tile>Abiquo</mat-grid-tile>
+            <mat-grid-tile>CloudSigma (API v2.0)</mat-grid-tile>
+            <mat-grid-tile>HostVirtual</mat-grid-tile>
+            <mat-grid-tile>Outscale INC</mat-grid-tile>
+            <mat-grid-tile>Linode</mat-grid-tile>
+            <mat-grid-tile>Exoscale</mat-grid-tile>
+            <mat-grid-tile>ElasticHosts</mat-grid-tile>
+            <mat-grid-tile>1and1</mat-grid-tile>
+            <mat-grid-tile>Kili Public Cloud</mat-grid-tile>
+            <mat-grid-tile>OpenStack</mat-grid-tile>
+            <mat-grid-tile>BSNL</mat-grid-tile>
+            <mat-grid-tile>Ovh</mat-grid-tile>
+            <mat-grid-tile>PCextreme AuroraCompute</mat-grid-tile>
+            <mat-grid-tile>Rackspace Cloud (Next Gen)</mat-grid-tile>
+            <mat-grid-tile>vCloud</mat-grid-tile>
+            <mat-grid-tile>RimuHosting</mat-grid-tile>
+            <mat-grid-tile>OpenNebula (v3.8)</mat-grid-tile>
+            <mat-grid-tile>Nimbus</mat-grid-tile>
+            <mat-grid-tile>Google Compute Engine</mat-grid-tile>
+            <mat-grid-tile>Aliyun ECS</mat-grid-tile>
+            <mat-grid-tile>Libvirt</mat-grid-tile>
+            <mat-grid-tile>GoGrid</mat-grid-tile>
+            <mat-grid-tile>vps.net</mat-grid-tile>
+            <mat-grid-tile>Cloudwatt</mat-grid-tile>
+            <mat-grid-tile>Ikoula</mat-grid-tile>
+            <mat-grid-tile>Indosat</mat-grid-tile>
+            <mat-grid-tile>Voxel VoxCLOUD</mat-grid-tile>
+            <mat-grid-tile>Eucalyptus</mat-grid-tile>
+            <mat-grid-tile>OnApp</mat-grid-tile>
+            <mat-grid-tile>NephoScale</mat-grid-tile>
+            <mat-grid-tile>KTUCloud</mat-grid-tile>
+            <mat-grid-tile>Amazon Web Services (AWS)</mat-grid-tile>
+            <mat-grid-tile>NTTAmerica</mat-grid-tile>
+            <mat-grid-tile>VCL</mat-grid-tile>
+            <mat-grid-tile>Bluebox Blocks</mat-grid-tile>
+            <mat-grid-tile>Brightbox</mat-grid-tile>
+            <mat-grid-tile>Joyent</mat-grid-tile>
+            <mat-grid-tile>CloudStack</mat-grid-tile>
+            <mat-grid-tile>ProfitBricks</mat-grid-tile>
+            <mat-grid-tile>MedOne</mat-grid-tile>
+            <mat-grid-tile>Gandi</mat-grid-tile>
+            <mat-grid-tile>DimensionData</mat-grid-tile>
+            <mat-grid-tile>Enomaly Elastic Computing Platform</mat-grid-tile>
+            <mat-grid-tile>Rackspace Cloud (First Gen)</mat-grid-tile>
+            <mat-grid-tile>SoftLayer</mat-grid-tile>
+            <mat-grid-tile>skalicloud</mat-grid-tile>
+            <mat-grid-tile>Packet</mat-grid-tile>
+            <mat-grid-tile>Outscale SAS</mat-grid-tile>
+            <mat-grid-tile>InternetSolutions</mat-grid-tile>
+            <mat-grid-tile>DigitalOcean</mat-grid-tile>
+            <mat-grid-tile>ServerLove</mat-grid-tile>
+            <mat-grid-tile>Vagrant (incl. local VMs)</mat-grid-tile>
+            <mat-grid-tile>Cloudscale</mat-grid-tile>
+          </mat-grid-list>
         </div>
       </div>
       <!-- First row | 100 hours; -->
 
       <!-- Second row -->
-      <div class="vertical-wrapper">
+      <div class="vertical-wrapper" style="margin-bottom: 1em">
         <div fxShow.sm="false" fxShow.xs="false">
           <div class="frame">
             <div class="tab">
@@ -92,19 +151,16 @@
         </ul>
       </div>
 
-      <div *ngIf="approach">
-        <div class="col-md-12">
-          <div *ngIf="approach === 'devops'">
-            <p>devops devops</p>
-          </div>
-          <div *ngIf="approach === 'rebuild_apps'">
-            <p>rebuild_apps rebuild_apps</p>
-          </div>
-          <div *ngIf="approach === 'elastic'">
-            <p>elastic elastic</p>
-          </div>
-        </div>
+      <div *ngIf="approach === 'devops'" [@fade]>
+        <p>Automating infrastructure has been a focus of ours since 2009 with ControlTier. Nowadays we focus on: Fabric, Ansible, Puppet, Chef, Salt &amp; etc.; with a concentration on: OS-specific packaging; Docker, and PaaS. Thereby removing the need for permanament DevOps engineers for anything smaller than large enterprise.</p>
       </div>
+      <div *ngIf="approach === 'rebuild_apps'" [@fade]>
+        <p>Using principles popularised by <a href="https://12factor.net" target="_blank">Heroku with 12-factor apps</a> and <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank">Roy Fielding with REST</a>, we re-engineer old stacks to be vertically scalable. Distributing degrees of failures, modularising to encourage independent evolvability, all enable more teams to join projects (collaborating without requiring discussion).</p>
+      </div>
+      <div *ngIf="approach === 'elastic'" [@fade]>
+        <p>Grow from 1 server to 10,000+. Develop around DNS with health checks (such as Consul or Mesos DNS), so that your applications know when they're online, finished, or are at capacity (and can act accordingly).</p>
+      </div>
+
       <!-- / Second row -->
 
       <!-- Third row -->
