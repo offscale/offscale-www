@@ -22,7 +22,7 @@ import { appRoutes } from './app.routes';
     BrowserModule, BrowserAnimationsModule, RouterModule, RouterModule.forRoot(appRoutes),
     MatIconModule,
     NavbarModule, FooterModule,
-    SlashModule, GettingStartedModule
+    // SlashModule, GettingStartedModule
   ],
   providers: [PlatformPickerService],
   bootstrap: [AppComponent]

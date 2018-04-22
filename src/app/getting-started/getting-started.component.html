@@ -216,9 +216,16 @@
     </h3>
 
     <p class="docs-markdown-p">
-      Note that you don't need to of deployed your nodes with offstrategy, add arbitrary nodes like so:
+      Note that you don't need to of deployed your nodes with offstrategy, add arbitrary nodes using either of the following methods.
     </p>
 
+    The <code>offset</code> tool:
+    <code class="lang-json docs-markdown-code">
+      python -m offset -n any-cluster-myosversion-myremotehostname --ip 255.255.255.255 -u myremoteusername -i "/Users/mylocalusername/.ssh/verysecure.pem" --purpose unclustered
+    </code>
+
+
+    <p>Alternatively, manually author JSON and add it to <code>etcd</code>:</p>
     <!--<app-config-builder [config]="true"></app-config-builder>-->
 
     random_node.json
