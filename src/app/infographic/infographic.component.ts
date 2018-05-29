@@ -1,9 +1,8 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { ObservableMedia } from '@angular/flex-layout';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/startWith';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-infographic',
@@ -72,7 +71,9 @@ export class InfographicComponent implements OnInit {
       }
     });
     this.cols = this.observableMedia.asObservable()
-      .map(change => grid.get(change.mqAlias))
-      .startWith(start);
+      .pipe(
+        map(change => grid.get(change.mqAlias)),
+        startWith(start)
+      );
   }
 }
