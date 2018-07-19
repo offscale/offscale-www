@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Observable } from 'rxjs';
+
 import { ObservableMedia } from '@angular/flex-layout';
+
+import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+
 import { MatIconModule } from '@angular/material';
 
 import { NavbarModule } from './navbar/navbar.module';
@@ -18,7 +19,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     RouterModule, RouterModule.forRoot(appRoutes),
     MatIconModule,
-    NavbarModule, FooterModule,
+    NavbarModule, FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

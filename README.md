@@ -1,6 +1,26 @@
-# OffscaleWww
+offscale.io
+===========
+Bunch of guides for using my offscale projects; and an introduction to services offered.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
+Written in Angular with Material. Butchered angular.material.io.
+
+## License
+Like most everywhere we do at offscale, this is open-source and free to use by all (incl. commercially).
+
+## Build dist
+
+    rm -rf dist; ng build --prod && d=../offscale.github.io && rm -rf "$d/dist" && mv "$PWD/dist" "$d" && cd "$d" && (git add .; git status) || ( >&2 echo BUILD FAILED )
+
+## Install
+
+Assumes you have latest Node.JS and npm on *nix machine, then just run:
+
+    npm i -g @angular/cli typescript
+    npm i
+
+---
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 

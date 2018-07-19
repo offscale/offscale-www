@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTabsModule } from '@angular/material';
-import { NgVerticalTabsModule } from 'angular-vertical-tabs/dist';
+
+import { VerticalTabsModule } from 'vertical-tabs';
 
 import { InfographicModule } from '../infographic/infographic.module';
 import { SvgViewerModule } from '../svg-viewer/svg-viewer.module';
@@ -18,7 +19,7 @@ import { slashRoutes } from './slash.routes';
     FlexLayoutModule,
     SvgViewerModule,
     InfographicModule,
-    NgVerticalTabsModule.forRoot()
+    VerticalTabsModule.forRoot()
   ],
   declarations: [SlashComponent]
 })
