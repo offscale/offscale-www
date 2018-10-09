@@ -18,7 +18,7 @@ export class PlatformPickerComponent implements OnInit {
     this.platformSelectd = this.platformPickerService.getPlatform();
   }
 
-  updateService(event: { value?: Platform }) {
+  updateService(event: {value?: Platform}) {
     if (event.value != null) this.platformPickerService.setPlatform(event.value);
   }
 }

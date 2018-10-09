@@ -9,15 +9,15 @@ import { AfterViewInit, Component } from '@angular/core';
   ]
 })
 export class SlashComponent implements AfterViewInit {
+  constructor() {
+  }
+
   scrollToId(id: string) {
     const e = document.getElementById(id.startsWith('#') ? id.substring(1) : id);
     if (e != null)
-      e.scrollIntoView({behavior: 'smooth'});
+      e.scrollIntoView({ behavior: 'smooth' });
   }
 
   ngAfterViewInit() {
-  }
-
-  constructor() {
   }
 }

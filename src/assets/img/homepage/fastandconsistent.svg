@@ -36,7 +36,8 @@
       <ellipse cx="10.294" cy="2.5" rx="2.471" ry="2.5"/>
       <ellipse cx="18.529" cy="2.5" rx="2.471" ry="2.5"/>
     </g>
-    <use xlink:href="#fac-b" mask="url(#fac-e)" fill="#CCF2F6" class="docs-svg-primary-light-60-fill docs-svg-primary-light-20-stroke" stroke="#00BCD4"
+    <use xlink:href="#fac-b" mask="url(#fac-e)" fill="#CCF2F6"
+         class="docs-svg-primary-light-60-fill docs-svg-primary-light-20-stroke" stroke="#00BCD4"
          stroke-width="2.2" stroke-opacity=".449"
          transform="translate(10 25)"/>
     <path

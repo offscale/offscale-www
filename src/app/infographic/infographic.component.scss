@@ -360,7 +360,7 @@ h1 {
 
 .nav-tabs.goals h1 {
   font-size: 1.5rem;
-// padding: 25px 10px;
+  // padding: 25px 10px;
 }
 
 .nav-tabs > li > a {
@@ -537,22 +537,22 @@ h1 {
 }
 
 .goal1 {
-@extend .goal;
+  @extend .goal;
   background-image: url('../../assets/img/Goal1.png');
 }
 
 .goal2 {
-@extend .goal;
+  @extend .goal;
   background-image: url('../../assets/img/Goal2.png');
 }
 
 .goal3 {
-@extend .goal;
+  @extend .goal;
   background-image: url('../../assets/img/Goal3.png');
 }
 
 .goal4 {
-@extend .goal;
+  @extend .goal;
   background-image: url('../../assets/img/Goal4.png');
 }
 

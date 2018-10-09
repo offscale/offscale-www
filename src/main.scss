@@ -5,13 +5,17 @@
 @import './styles/tables';
 @import './styles/general';
 
+
 // Include material core styles.
 @include mat-core();
 
+
 // Define the light theme.
 $primary: mat-palette($mat-indigo);
-$accent: mat-palette($mat-pink, A200, A100, A400);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+
 $theme: mat-light-theme($primary, $accent);
+
 
 // Define the dark theme.
 $dark-primary: mat-palette($mat-deep-orange);
@@ -21,7 +25,9 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 // Apply theme
 @include angular-material-theme($dark-theme);
-@include app-root-theme($dark-theme);
+@include material-docs-app-theme($dark-theme);
+
+// @include app-root-theme($dark-theme);
 
 .light-colors {
   background-color: mat-color($primary, default);
@@ -33,10 +39,11 @@ $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   color: map-get($mat-dark-theme-background, background);
 }
 
-.docs-markdown-code {
-  background: rgba(0, 0, 0, 0.03);
-}
+/*.docs-markdown-code {
+  white-space: pre-wrap;
+}*/
 
-.docs-markdown {
-  background-color: whitesmoke;
+code {
+  display: block !important;
+  white-space: pre-wrap !important;
 }

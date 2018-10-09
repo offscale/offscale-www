@@ -15,7 +15,6 @@ import {
   MatSelectModule,
   MatSidenavModule,
   MatSnackBarModule,
-  // MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
 

@@ -8,9 +8,9 @@ describe('InfographicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InfographicComponent ]
+      declarations: [InfographicComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

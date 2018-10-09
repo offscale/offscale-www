@@ -29,34 +29,34 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./lib.css', './infographic.component.scss']
 })
 export class InfographicComponent implements OnInit {
-  // tabs
-  _multicloud: string;
-  set multicloud(cloud: string) {
-    this._multicloud = this._multicloud === cloud ? undefined : cloud;
-  }
-
-  get multicloud(): string {
-    return this._multicloud;
-  }
-
-  _approach: string;
-
-  set approach(goal: string) {
-    this._approach = goal === this._approach ? undefined : goal;
-  }
-
-  get approach(): string {
-    return this._approach;
-  }
-
   key_tech: string;
-
   /**
    * The number of colums in the md-grid-list directive.
    */
   public cols: Observable<number>;
 
   constructor(private observableMedia: ObservableMedia) {}
+
+  // tabs
+  _multicloud: string;
+
+  get multicloud(): string {
+    return this._multicloud;
+  }
+
+  set multicloud(cloud: string) {
+    this._multicloud = this._multicloud === cloud ? undefined : cloud;
+  }
+
+  _approach: string;
+
+  get approach(): string {
+    return this._approach;
+  }
+
+  set approach(goal: string) {
+    this._approach = goal === this._approach ? undefined : goal;
+  }
 
   ngOnInit() {
     const grid = new Map([
