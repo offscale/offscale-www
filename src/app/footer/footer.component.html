@@ -1,44 +1,33 @@
-<div id="footer">
-  <div id="footerAdminSection">
-    <ul class="inline">
-      <li>
-        <a routerLink="/">Home</a>
-      </li>
-      <li>
-        <a routerLink="docs/getting-started">Getting started</a>
-      </li>
-    </ul>
-    <div id="infoi">
-      <img (click)="scrollToTop()"
-           src="../../assets/img/extra/back-to-top.png"
-           alt="Back to top" title="Back to top"/>
-    </div>
-  </div>
-</div>
-
 <footer class="docs-footer">
   <div class="docs-footer-list">
-    <div class="footer-logo">
-      <a href="https://github.com/offscale" target="_blank" aria-label="GitHub">
-        <img class="docs-footer-angular-logo"
-             src="assets/img/logos/github-circle-white-transparent.svg"
-             alt="GitHub">
-      </a>
-      <a href="https://linkedin.com/in/samuelmarks" target="_blank" aria-label="LinkedIn">
-        <img class="docs-footer-angular-logo"
-             src="assets/img/logos/LinkedIn.svg"
-             alt="/in/">
-      </a>
-      <a href="mailto:samuel@offscale.io" aria-label="Email">
-        <img class="docs-footer-angular-logo"
-             src="assets/img/logos/gmail.svg"
-             alt="email"/>
-      </a>
-      &emsp;
+    <div class="docs-footer-logo">
+      <div class="footer-logo">
+          <a href="https://github.com/offscale" target="_blank" aria-label="GitHub">
+            <img class="docs-footer-angular-logo"
+                 src="assets/img/logos/github-circle-white-transparent.svg"
+                 alt="GitHub">
+          </a>
+          <a href="https://linkedin.com/in/samuelmarks" target="_blank" aria-label="LinkedIn">
+            <img class="docs-footer-angular-logo"
+                 src="assets/img/logos/LinkedIn.svg"
+                 alt="/in/">
+          </a>
+          <a href="mailto:samuel@offscale.io" aria-label="Email">
+            <img class="docs-footer-angular-logo"
+                 src="assets/img/logos/gmail.svg"
+                 alt="email"/>
+          </a>
+          &emsp;
+      </div>
     </div>
 
-    <div class=" docs-footer-copyright">
-      <p>&copy; 2018. Code licensed under an MIT-style License. Documentation licensed under CC BY 4.0.</p>
+    <div class="docs-footer-version">
+      <button routerLink="guide/getting-started" mat-button>Getting started</button>
+    </div>
+
+    <div class="docs-footer-copyright">
+      <span>Code licensed under an MIT-style License.</span>
+      <span>Documentation licensed under CC BY 4.0.</span>
     </div>
   </div>
 </footer>

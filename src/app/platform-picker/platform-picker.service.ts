@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 
 export type Platform = 'macOS' | 'Linux' | 'Windows';
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class PlatformPickerService {
   platforms: Platform[] = [
     'macOS', 'Linux', 'Windows'

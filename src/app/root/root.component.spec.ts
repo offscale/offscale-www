@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlashComponent } from './slash.component';
+import { RootComponent } from './root.component';
 
-describe('SlashComponent', () => {
-  let component: SlashComponent;
-  let fixture: ComponentFixture<SlashComponent>;
+describe('RootComponent', () => {
+  let component: RootComponent;
+  let fixture: ComponentFixture<RootComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SlashComponent]
+      declarations: [ RootComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlashComponent);
+    fixture = TestBed.createComponent(RootComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -5,7 +5,7 @@ import { Platform, PlatformPickerService } from './platform-picker.service';
 @Component({
   selector: 'app-platform-picker',
   templateUrl: './platform-picker.component.html',
-  styleUrls: ['./platform-picker.component.css'],
+  styleUrls: ['./platform-picker.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class PlatformPickerComponent implements OnInit {

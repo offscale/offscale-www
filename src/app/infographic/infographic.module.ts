@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { InfographicComponent } from './infographic.component';
-import { MaterialImportModule } from '../material-import/material-import.module';
+import { MatButtonModule, MatGridListModule, MatIconModule } from '@angular/material';
+
 import { SvgViewerModule } from '../svg-viewer/svg-viewer.module';
+import { InfographicComponent } from './infographic.component';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
-    FlexLayoutModule, MaterialImportModule,
+    FlexLayoutModule,
+    MatGridListModule, MatIconModule, MatButtonModule,
     SvgViewerModule
   ],
   declarations: [InfographicComponent],

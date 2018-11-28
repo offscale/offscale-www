@@ -1,13 +1,15 @@
-<mat-toolbar color="primary">
-  <a routerLink="/" class="docs-navbar-hide-vsmall">offscale.io</a>
-
-  <!--
-  <a mat-button class="docs-navbar-hide-small docs-button"
+<!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
+<nav class="docs-navbar-header"
+     [class.is-next-version]="isNextVersion">
+  <button mat-button class="docs-button docs-navbar-hide-vsmall" id="name" routerLink="/" aria-label="offscale.io">
+    offscale.io
+  </button>
+  <!--<a mat-button class="docs-navbar-hide-small docs-button"
      *ngFor="let key of sectionKeys"
-     [routerLink]="key">{{sections[key]}}</a>
+     [routerLink]="key">{{sections[key].name}}</a>
   <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   -->
-  <ng-container *ngIf="w.location.pathname.indexOf('docs/getting-started') > -1">
+  <ng-container *ngIf="w.location.pathname.indexOf('guide/getting-started') > -1">
     <div class="flex-spacer"></div>
     <app-platform-picker></app-platform-picker>
   </ng-container>
@@ -19,8 +21,4 @@
       src="../assets/img/logos/github-circle-white-transparent.svg"
       scaleToContainer="true"></app-svg-viewer>
   </a>
-
-  <!--
-  <theme-picker></theme-picker>
-  -->
-</mat-toolbar>
+</nav>

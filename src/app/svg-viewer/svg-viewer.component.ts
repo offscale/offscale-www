@@ -1,21 +1,16 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-
-const getAbsolutePathFromSrc = (src: string) => src.slice(src.indexOf('assets/') - 1);
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-svg-viewer',
-  template: `<div class='app-svg-viewer' [ngStyle]="ngstyle" aria-hidden='true'></div>`,
-  styleUrls: ['./svg-viewer.component.css']
+  templateUrl: './svg-viewer.component.html',
+  styleUrls: ['./svg-viewer.component.scss']
 })
 export class SvgViewerComponent implements OnInit {
   @Input() src: string;
   @Input() scaleToContainer: boolean;
-  @Input() styles: string;
-  ngstyle: string;
 
-  constructor(private elementRef: ElementRef, private http: Http) {
-  }
+  constructor(private elementRef: ElementRef, private http: HttpClient) { }
 
   ngOnInit() {
     this.fetchAndInlineSvgContent(this.src);
@@ -30,15 +25,15 @@ export class SvgViewerComponent implements OnInit {
       svg.setAttribute('height', '100%');
       svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     }
-    if (this.styles && this.styles.length) {
-      this.ngstyle = `${this.styles}`;
-    }
   }
 
   private fetchAndInlineSvgContent(path: string): void {
     const svgAbsPath = getAbsolutePathFromSrc(path);
-    this.http.get(svgAbsPath).subscribe(svgResponse =>
-      this.inlineSvgContent(svgResponse.text())
-    );
+    this.http.get(svgAbsPath, {responseType: 'text'}).subscribe(svgResponse => {
+      this.inlineSvgContent(svgResponse);
+    });
   }
 }
+
+
+const getAbsolutePathFromSrc = (src: string): string => src.slice(src.indexOf('assets/') - 1);

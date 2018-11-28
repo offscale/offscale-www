@@ -8,9 +8,9 @@ describe('SvgViewerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SvgViewerComponent]
+      declarations: [ SvgViewerComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {

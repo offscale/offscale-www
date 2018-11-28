@@ -40,6 +40,10 @@
   display: none;
 }
 
+#name {
+  font-size: larger;
+}
+
 /**
   * Rules for when the device is detected to be a small screen.
   * Moves content two rows instead of one.
@@ -60,15 +64,4 @@
   .docs-navbar--github-logo {
     margin: 0;
   }
-}
-
-@media (max-width: 400px) {
-  .docs-navbar-hide-vsmall {
-    display: none;
-  }
-}
-
-a {
-  color: whitesmoke;
-  text-decoration: none;
 }

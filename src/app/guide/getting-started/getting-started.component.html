@@ -36,19 +36,19 @@
       class="docs-header-link docs-markdown-h3">
       Step 0: Install build dependencies
     </h3>
-    <code class="lang-bash docs-markdown-code" *ngIf="os('Linux')">
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('Linux')">
       sudo apt update
       sudo apt install build-essential git-core tcl
-    </code>
+    </code></pre>
 
     <a *ngIf="os('macOS')" href="https://developer.apple.com/downloads" class="docs-markdown-a" target="_blank">
       Latest XCode and Command Line Tools
     </a>
-    <code class="lang-bash docs-markdown-code" *ngIf="os('macOS')">
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('macOS')">
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       brew update
       brew install git
-    </code>
+    </code></pre>
 
     <section class="docs-guide-content" *ngIf="os('Windows')">
       Ensure you check "Add to PATH" whenever asked:
@@ -61,11 +61,11 @@
         <li><a class="docs-markdown-a" href="https://www.python.org/downloads/windows">Python 2.7</a></li>
       </ol>
       <p class="docs-markdown-p">Test that it installed correctly with:</p>
-      <code class="lang-bash docs-markdown-code">
+      <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
         git --version
         cl /?
         python --version
-      </code>
+      </code></pre>
     </section>
     <p class="docs-markdown-p">
       Now ensure this outputs something like "Python 2.7.14". If >3, switch to <code>python2</code> and
@@ -99,10 +99,10 @@
     </p>
 
     <p class="docs-markdown-p">Test that it installed correctly&mdash;and has executable permissions&mdash;with:</p>
-    <code class="lang-bash docs-markdown-code">
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
       etcd --version
       etcdctl --version
-    </code>
+    </code></pre>
   </section>
 
   <section id="step-2-prepare-libraries">
@@ -115,10 +115,10 @@
       Let's begin by cloning all the repositories of the offscale organisation, we'll use <code>gitim</code> which I
       extended with organisation support:
     </p>
-    <code class="lang-bash docs-markdown-code">
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
       pip install https://api.github.com/repos/SamuelMarks/gitim/tarball/v2#egg=gitim
       python -m gitim -u $YOUR_GITHUB_USERNAME -o offscale -d offscale
-    </code>
+    </code></pre>
 
     <p class="docs-markdown-p">
       Now install them all. <a href="https://virtualenv.pypa.io" class="docs-markdown-a" target="_blank">virtualenv</a>
@@ -132,20 +132,20 @@
       your OS, then run:
     </p>
 
-    <code class="lang-bash docs-markdown-code" *ngIf="os('macOS') || os('Linux')">
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('macOS') || os('Linux')">
       cd offscale
       set VENV=path/to/your/virtualenv
       pip_install_all
       pip_install_all
       pip_install_all
-    </code>
-    <code class="lang-bash docs-markdown-code" *ngIf="os('Windows')">
+    </code></pre>
+    <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('Windows')">
       cd offscale
       set VENV=path\to\your\virtualenv
       pip_install_all
       pip_install_all
       pip_install_all
-    </code>
+    </code></pre>
   </section>
 
   <section id="step-3-using-offstrategy">
@@ -232,7 +232,6 @@
 
     random_node.json
     <pre style="background-color: rgba(0, 0, 0, 0.03); font-family: 'Roboto Mono', monospace;">
-
  {{ '{' }}
    "id": "any-cluster-myosversion-myremotehostname",
    "name": "any-cluster-myosversion-myremotehostname",
@@ -244,9 +243,9 @@
      "255.255.255.255"
    ],
    "extra": {{ '{' }}
-     "user_hostname_port": "myremoteusername@255.255.255.255:22",
+      "user_hostname_port": "myremoteusername@255.255.255.255:22",
      "ssh_config": {{ '{' }}
-       "IdentityFile": "/Users/mylocalusername/.ssh/verysecure.pem",
+      "IdentityFile": "/Users/mylocalusername/.ssh/verysecure.pem",
        "LogLevel": "FATAL",
        "HostName": "255.255.255.255",
        "IdentitiesOnly": "yes",
@@ -256,10 +255,10 @@
        "User": "myremoteusername",
        "StrictHostKeyChecking": "yes",
        "Port": "22"
-     {{ '}' }},
+      {{ '}' }},
      "user": "myremoteusername",
      "provider": "azure_arm"
-   {{ '}' }},
+      {{ '}' }},
    "driver": "AzureNodeDriver",
    "state": "running"
  {{ '}' }}
@@ -273,10 +272,10 @@
       etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "$(cat random_node.json)"
     </code>
 
-    <code class="lang-json docs-markdown-code" *ngIf="os('Windows')">
+    <pre class="docs-markdown-pre"><code class="lang-json docs-markdown-code" *ngIf="os('Windows')">
       set /p RN={{'<'}}random_node.json
       etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "%RN%"
-    </code>
+    </code></pre>
   </section>
 
   <hr>

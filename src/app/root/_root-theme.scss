@@ -5,18 +5,13 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-  app-slash {
+  app-root {
     .docs-header-background {
       background: mat-color($primary);
     }
 
     .docs-header-headline {
       color: mat-color($primary, default-contrast);
-    }
-
-    .primary-color {
-      @extend .docs-footer;
-      color: mat-color($primary, default-contrast) !important;
     }
 
     .docs-header-start {
@@ -26,12 +21,20 @@
     .docs-homepage-row {
       color: mat-color($foreground, secondary-text);
     }
-    .mat-icon {
-      width: auto;
+
+    mat-selection-list {
+      background-color: #00aac4;
     }
 
-    .mat-list, .mat-nav-list, .mat-selection-list {
-      background-color: #00AAC4;
+    .primary-color {
+      @extend .docs-footer;
+      color: mat-color($primary, default-contrast) !important;
+    }
+
+    .btn-group {
+      flex-direction: row;
+      box-sizing: border-box;
+      display: flex;
     }
   }
 }

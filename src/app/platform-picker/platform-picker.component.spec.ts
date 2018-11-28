@@ -8,9 +8,9 @@ describe('PlatformPickerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PlatformPickerComponent]
+      declarations: [ PlatformPickerComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
