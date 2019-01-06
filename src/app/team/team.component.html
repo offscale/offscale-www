@@ -1,0 +1,22 @@
+<h1>Team</h1>
+
+<p class="heading-text">
+  offscale.io is a consultancy. The following includes engineers with their own companies, that we have on call for our projects.
+</p>
+
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+  <mat-card *ngFor="let member of members" style="padding-bottom: 15px">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{member.title}}</mat-card-title>
+      <mat-card-subtitle>{{member.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="member.url" alt="Photo of {{member.title}}">
+    <mat-card-content>
+      <p>
+        {{member.content}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
