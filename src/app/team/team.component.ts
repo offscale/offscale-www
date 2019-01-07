@@ -35,9 +35,7 @@ export class TeamComponent {
       title: 'Viktor',
       subtitle: 'Software engineer',
       content: 'Interested in software architecture, programming language theory, parallel programming, systems programming, ' +
-        'Unix philosophy. Author of a number of side-projects. Participant in Google Summer of Code.\n' +
-        'Ivan: Engineering and DevOps enthusiast, winner of multiple hackathons, project management and soft skills expert, ' +
-        'PLs: C++, Python, Go.',
+        'Unix philosophy. Author of a number of side-projects. Participant in Google Summer of Code.',
       url: '/assets/img/team/victor.jpg'
     },
     {

@@ -4,12 +4,12 @@ mat-card {
 }
 
 mat-card-content {
-  height: 90px;
+  height: 110px;
 }
 
 img {
-  height: 400px;
-  width: 500px;
+  max-height: 400px;
+  max-width: 500px;
 }
 
 .heading-text {
