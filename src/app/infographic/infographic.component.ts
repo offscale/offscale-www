@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
-import { ObservableMedia } from '@angular/flex-layout';
+import { MediaObserver } from '@angular/flex-layout';
 
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -33,9 +33,9 @@ export class InfographicComponent implements OnInit {
   /**
    * The number of colums in the md-grid-list directive.
    */
-  public cols: Observable<number>;
+  public cols: Observable<number|number[]>;
 
-  constructor(private observableMedia: ObservableMedia) {}
+  constructor(private observableMedia: MediaObserver) {}
 
   // tabs
   _multicloud: string;
@@ -66,7 +66,7 @@ export class InfographicComponent implements OnInit {
       ['lg', 3],
       ['xl', 3]
     ]);
-    let start: number;
+    let start = 1;
     grid.forEach((cols, mqAlias) => {
       if (this.observableMedia.isActive(mqAlias)) {
         start = cols;
@@ -74,7 +74,7 @@ export class InfographicComponent implements OnInit {
     });
     this.cols = this.observableMedia.asObservable()
       .pipe(
-        map(change => grid.get(change.mqAlias)),
+        map(changes => changes.map(change => grid.get(change.mqAlias))),
         startWith(start)
       );
   }

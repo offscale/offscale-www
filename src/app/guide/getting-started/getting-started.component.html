@@ -37,17 +37,17 @@
       Step 0: Install build dependencies
     </h3>
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('Linux')">
-      sudo apt update
-      sudo apt install build-essential git-core tcl
+  sudo apt update
+  sudo apt install build-essential git-core tcl
     </code></pre>
 
     <a *ngIf="os('macOS')" href="https://developer.apple.com/downloads" class="docs-markdown-a" target="_blank">
       Latest XCode and Command Line Tools
     </a>
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('macOS')">
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-      brew update
-      brew install git
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew install git
     </code></pre>
 
     <section class="docs-guide-content" *ngIf="os('Windows')">
@@ -62,16 +62,16 @@
       </ol>
       <p class="docs-markdown-p">Test that it installed correctly with:</p>
       <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
-        git --version
-        cl /?
-        python --version
+  git --version
+  cl /?
+  python --version
       </code></pre>
     </section>
     <p class="docs-markdown-p">
       Now ensure this outputs something like "Python 2.7.14". If >3, switch to <code>python2</code> and
       <code>pip2</code> executables for rest of guide.</p>
     <code class="lang-bash docs-markdown-code">
-      python --version
+  python --version
     </code>
 
   </section>
@@ -100,8 +100,8 @@
 
     <p class="docs-markdown-p">Test that it installed correctly&mdash;and has executable permissions&mdash;with:</p>
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
-      etcd --version
-      etcdctl --version
+  etcd --version
+  etcdctl --version
     </code></pre>
   </section>
 
@@ -116,8 +116,8 @@
       extended with organisation support:
     </p>
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">
-      pip install https://api.github.com/repos/SamuelMarks/gitim/tarball/v2#egg=gitim
-      python -m gitim -u $YOUR_GITHUB_USERNAME -o offscale -d offscale
+  pip install https://api.github.com/repos/SamuelMarks/gitim/tarball/v2#egg=gitim
+  python -m gitim -u $YOUR_GITHUB_USERNAME -o offscale -d offscale
     </code></pre>
 
     <p class="docs-markdown-p">
@@ -133,18 +133,18 @@
     </p>
 
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('macOS') || os('Linux')">
-      cd offscale
-      set VENV=path/to/your/virtualenv
-      pip_install_all
-      pip_install_all
-      pip_install_all
+  cd offscale
+  set VENV=path/to/your/virtualenv
+  pip_install_all
+  pip_install_all
+  pip_install_all
     </code></pre>
     <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code" *ngIf="os('Windows')">
-      cd offscale
-      set VENV=path\to\your\virtualenv
-      pip_install_all
-      pip_install_all
-      pip_install_all
+  cd offscale
+  set VENV=path\to\your\virtualenv
+  pip_install_all
+  pip_install_all
+  pip_install_all
     </code></pre>
   </section>
 
@@ -165,7 +165,7 @@
     </p>
 
     <code class="lang-bash docs-markdown-code">
-      etcd
+  etcd
     </code>
 
     <p class="docs-markdown-p">
@@ -174,7 +174,7 @@
     </p>
 
     <code class="lang-bash docs-markdown-code">
-      python -m offstrategy -h
+  python -m offstrategy -h
     </code>
   </section>
 
@@ -196,7 +196,7 @@
     </p>
 
     <code class="lang-bash docs-markdown-code">
-      python -m offregister -h
+  python -m offregister -h
     </code>
 
     <p class="docs-markdown-p">
@@ -222,8 +222,8 @@
 
     The <code>offset</code> tool:
     <code class="lang-json docs-markdown-code">
-      python -m offset -n any-cluster-myosversion-myremotehostname --ip 255.255.255.255 -u myremoteusername -i
-      "/Users/mylocalusername/.ssh/verysecure.pem" --purpose unclustered
+  python -m offset -n any-cluster-myosversion-myremotehostname --ip 255.255.255.255 -u myremoteusername -i
+  "/Users/mylocalusername/.ssh/verysecure.pem" --purpose unclustered
     </code>
 
 
@@ -269,12 +269,12 @@
     </p>
 
     <code class="lang-json docs-markdown-code" *ngIf="os('macOS') || os('Linux')">
-      etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "$(cat random_node.json)"
+  etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "$(cat random_node.json)"
     </code>
 
     <pre class="docs-markdown-pre"><code class="lang-json docs-markdown-code" *ngIf="os('Windows')">
-      set /p RN={{'<'}}random_node.json
-      etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "%RN%"
+  set /p RN={{'<'}}random_node.json
+  etcdctl set /unclustered/any-cluster-myosversion-myremotehostname "%RN%"
     </code></pre>
   </section>
 
