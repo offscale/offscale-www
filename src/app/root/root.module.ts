@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule, MatGridListModule } from '@angular/material';
 
-import { VerticalTabsModule } from 'vertical-tabs';
+import { NgVerticalTabsModule } from 'vertical-tabs';
 
 import { SvgViewerModule } from '../svg-viewer/svg-viewer.module';
 import { InfographicModule } from '../infographic/infographic.module';
@@ -18,7 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule, RouterModule, RouterModule.forChild(rootRoutes),
     FlexLayoutModule,
     MatButtonModule, MatGridListModule,
-    VerticalTabsModule.forRoot(),
+    NgVerticalTabsModule.forRoot(),
     InfographicModule, SvgViewerModule
   ]
 })
