@@ -1,6 +1,9 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+const getAbsolutePathFromSrc = (src: string): string =>
+  src.slice(src.indexOf('assets/') - 1);
+
 @Component({
   selector: 'app-svg-viewer',
   templateUrl: './svg-viewer.component.html',
@@ -16,7 +19,7 @@ export class SvgViewerComponent implements OnInit {
     this.fetchAndInlineSvgContent(this.src);
   }
 
-  private inlineSvgContent(template) {
+  private inlineSvgContent(template: string) {
     this.elementRef.nativeElement.innerHTML = template;
 
     if (this.scaleToContainer) {
@@ -29,11 +32,8 @@ export class SvgViewerComponent implements OnInit {
 
   private fetchAndInlineSvgContent(path: string): void {
     const svgAbsPath = getAbsolutePathFromSrc(path);
-    this.http.get(svgAbsPath, {responseType: 'text'}).subscribe(svgResponse => {
+    this.http.get(svgAbsPath, { responseType: 'text' }).subscribe(svgResponse => {
       this.inlineSvgContent(svgResponse);
     });
   }
 }
-
-
-const getAbsolutePathFromSrc = (src: string): string => src.slice(src.indexOf('assets/') - 1);

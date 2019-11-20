@@ -1,0 +1,145 @@
+<section class="hero">
+  <div class="flex-container desktop-flex-rows fixed-width-lg p-v-lg flex-space-between">
+    <div>
+      <a routerLink="/">
+        <app-svg-viewer fxFlex src="/assets/logo-offscale.svg"></app-svg-viewer>
+
+      </a>
+    </div>
+    <nav fxHide.lt-md fxLayout="row" fxLayoutGap="20px">
+      <!--
+
+  <a href="#" fxFlex>docs</a>
+  <a href="#" fxFlex>download</a>
+  -->
+
+      <h1 fxFlex>
+        <a href="https://github.com/offscale">
+          <img src="/assets/github-white.svg"
+               alt="GitHub repos for Compiler Driven Development"
+               height="50px"/>
+        </a>
+      </h1>
+    </nav>
+  </div>
+
+  <div class="text-size-xl text-center m-v-lg" style="padding-bottom: 200px;">
+    Scale from a single developer and server to<br/> 100s of engineering teams and 10,000 nodes.
+  </div>
+
+  <!--
+  <div class="text-center" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px"
+       style="padding-bottom: 200px;">
+    <a href="#" class="btn btn-primary" fxFlex>Download</a>
+    <a href="#" class="btn btn-secondary" fxFlex>Get Started</a>
+  </div>
+  -->
+</section>
+
+<section class="about center">
+  <div class="flex-container flex-cols m-v-lg">
+    <div class="hero-image" style="margin-top: -200px;" [innerHtml]="safeHtml" *ngIf="safeHtml">
+      <!--<img src="/assets/app-hero.png" width="100%"/>-->
+      <a href="https://asciinema.org/a/pziMJGIXpuyuXufMMhemZXIUD" target="_blank">
+        <img src="https://asciinema.org/a/pziMJGIXpuyuXufMMhemZXIUD.svg"/>
+      </a>
+    </div>
+
+    <div class="flex-container m-v-lg text-size-lg fixed-width-md">
+      Stop relying on backend and cloud&nbsp;as&nbsp;a&nbsp;Service providers.<br/>Confidently rolling your own, and/or
+      on theirs.
+    </div>
+
+    <div fxLayout="row" fxLayout.lt-md="column">
+      <div fxFlex>
+        <img src="/assets/dial-36x.svg"/>
+        <h2>36&times; faster</h2>
+        <div>Speedup development through our compilers. More details on <a href="https://compilers.com.au"
+                                                                           target="_blank">its website</a>.
+        </div>
+      </div>
+
+      <div fxFlex>
+        <img src="/assets/dial-heart.svg"/>
+        <h2>100% open source</h2>
+        <div>(Apache OR MIT) licensed. Totally free.</div>
+      </div>
+
+      <div fxFlex>
+        <img src="/assets/dial-gear.svg"/>
+        <h2>Infrastructure</h2>
+        <div>Our contributions to Kubernetes and Apache Mesos will allow them to scale down to 1 node then back up to
+          5,000 and 10,000 nodes respectively.
+        </div>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.lt-md="column">
+      <div fxFlex>
+        <img src="/assets/dial-36x.svg"/>
+        <h2>Multicloud</h2>
+        <div>Supporting over 52 different public and private cloud providers.</div>
+      </div>
+
+      <div fxFlex>
+        <img src="/assets/dial-heart.svg"/>
+        <h2>Distributed systems</h2>
+        <div>C++, Rust, Go, and Python development. Custom consensus and<br/> both stack and register based VMs.</div>
+      </div>
+
+      <div fxFlex>
+        <img src="/assets/dial-gear.svg"/>
+        <h2>Artificial Intelligence</h2>
+        <div>Meta-framework atop TensorFlow and PyTorch developed during our founder's PhD.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <div class="flex-container desktop-flex-rows fixed-width-lg m-v-lg flex-space-between">
+    <div>
+      <img src="/assets/cdd-diagram.svg" width="100%"/>
+    </div>
+    <div>
+      <div class="text-bold text-size-md">Compilers</div>
+      <p>
+        The key differentiator in <a href="https://compilers.com.au" target="_blank">our approach</a>, is that we explicitly and
+        statically traverse the AST of each language, in each language, then
+        code-generate merged changes.
+      </p>
+
+      <div class="text-bold text-size-md">Infrastructure</div>
+      <p>
+        Stop relying on database as a Service (DBaaS), container as a Service (caaS), platform as a Service (PaaS). Switch been vendors, be portable, use aaS when relevant threshold is met.
+      </p>
+
+      <div class="text-bold text-size-md">Open Source</div>
+      <p>
+        (Apache-2.0 OR MIT) licensed, enabling maximum integration with any of
+        your systems, e.g. IDEs, and version control systems (with CI/CD
+        pipelines).
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="case_study p-v-lg">
+  <div class="flex-container text-center flex-cols flex-center">
+    <div class="m-v-md text-size-lg">Software-engineering consulting</div>
+    <a href="mailto:samuel@offscale.io" class="btn btn-primary m-v-md">
+      get in touch
+    </a>
+  </div>
+</section>
+
+<footer fxLayout="row" fxLayoutAlign="center center"
+        style="padding: 40px 0 40px 90px" ngStyle.lt-md="{'padding': 0 40px}"
+        class="text-center">
+  <a routerLink="/" fxFlex>
+    <app-svg-viewer fxFlex src="/assets/logo-offscale.svg"></app-svg-viewer>
+  </a>
+  <div class="mobile-hide" fxFlex>
+    &copy; 2018&ndash;2019 <a href="https://offscale.io">offscale</a>
+  </div>
+</footer>

@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { SvgViewerComponent } from './svg-viewer.component';
 
-
 @NgModule({
   declarations: [SvgViewerComponent],
   imports: [
@@ -12,4 +11,4 @@ import { SvgViewerComponent } from './svg-viewer.component';
   ],
   exports: [SvgViewerComponent]
 })
-export class SvgViewerModule { }
+export class SvgViewerModule {}

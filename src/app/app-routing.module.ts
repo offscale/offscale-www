@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
-  { path: '', loadChildren: './root/root.module#RootModule' },
-  { path: 'guide', loadChildren: './guide/guide.module#GuideModule' },
-  { path: 'team', loadChildren: './team/team.module#TeamModule' }
+  { path: '', loadChildren: () => import('./slash/slash.module').then(m => m.SlashModule) }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true, scrollPositionRestoration: 'enabled' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
