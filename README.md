@@ -9,8 +9,7 @@ First [`npm i -g angular-cli-ghpages`](https://github.com/angular-schule/angular
 
     ng build --prod
     cp README.md dist/offscale-www
-    printf 'offscale.io\n' >> dist/offscale-www/CNAME
-    ngh --dir='dist/offscale-www' --repo='https://github.com/offscale/offscale.github.io' --branch='master' --message="$(git log -1 --pretty='%B')"
+    ngh --cname='offscale.io' --dir='dist/offscale-www' --repo='https://github.com/offscale/offscale.github.io' --branch='master' --message="$(git log -1 --pretty='%B')"
 
 ## Install
 
