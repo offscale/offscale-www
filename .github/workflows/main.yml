@@ -31,4 +31,4 @@ jobs:
           git config --global user.name "$author"
           email="${email_author#*<}"; email="${email::-1}"
           git config --global user.email "$email"
-          ngh --cname='offscale.io' --dir='dist/offscale-www' --repo='https://'"$GITHUB_TOKEN"'github.com/offscale/offscale.github.io' --branch='master' --message="$MSG" --no-silent
+          ngh --cname='offscale.io' --dir='dist/offscale-www' --repo='https://'"$GITHUB_TOKEN"'@github.com/offscale/offscale.github.io' --branch='master' --message="$MSG" --no-silent
