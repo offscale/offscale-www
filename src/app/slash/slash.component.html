@@ -5,8 +5,8 @@
 </app-navbar>
 
 <section class="center" fxLayout="column" style="padding: 0 18%" ngStyle.lt-md="padding: 0">
-  <div class="m-v-lg text-size-lg" fxFlex="100">
-    Hardcore programming as a consultancy.
+  <div class="m-v-lg text-size-lg" fxFlex="100" style="padding: 0 10px">
+    Interface as a service. Consulting as a practice.
   </div>
 
 
@@ -14,21 +14,64 @@
     <div fxFlex="33">
       <!--<img src="/assets/dial-multicloud.svg"/>-->
       <h2>Cross-platform</h2>
-      <p>Build and release for Windows, Linux, macOS, FreeBSD, OpenBSD, Solaris (OpenSolaris &rarr; OpenIndiana), iOS,
-        Android, and web.</p>
+      <p>Build and release for multiple platforms, including:</p>
+      <div fxLayout="row">
+        <ul fxFlex="50">
+          <li>Windows</li>
+          <li>Linux</li>
+          <li>macOS</li>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>web</li>
+        </ul>
+        <ul>
+          <li>FreeBSD</li>
+          <li>OpenBSD</li>
+          <li>Solaris (OpenSolaris &rarr; illumos &rarr; OpenIndiana)</li>
+        </ul>
+      </div>
     </div>
 
     <div fxFlex="33">
       <!--<img src="/assets/dial-distributed.svg"/>-->
       <h2>Multicloud</h2>
-      <p>Deploy and manage across any of 50+ different public and private cloud providers.</p>
+      <p>Deploy and manage across any of 50+ different public and private cloud providers,
+        including:</p>
+      <div fxLayout="row">
+        <ul fxFlex="50">
+          <li>AWS</li>
+          <li>Microsoft Azure</li>
+          <li>Google Cloud</li>
+          <li>IBM Cloud</li>
+          <li>ovh</li>
+        </ul>
+        <ul>
+          <li>openstack</li>
+          <li>Apache cloudstack</li>
+          <li>Joyent</li>
+          <li>Rackspace</li>
+        </ul>
+      </div>
     </div>
 
     <div fxFlex="33">
       <!--<img src="/assets/dial-ml.svg"/>-->
       <h2>Machine Learning and Artificial Intelligence</h2>
-      <p>Meta-framework built supporting: TensorFlow, Keras, PyTorch, XGBoost, scikit.learn, JAX, Trax, Flax,
-        &amp;etc.</p>
+      <p>Meta-framework built supporting:</p>
+      <div fxLayout="row">
+        <ul fxFlex="50">
+          <li>TensorFlow</li>
+          <li>Keras</li>
+          <li>PyTorch</li>
+          <li>XGBoost</li>
+        </ul>
+        <ul>
+          <li>scikit.learn</li>
+          <li>JAX</li>
+          <li>Trax</li>
+          <li>Flax</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -36,19 +79,43 @@
     <div fxFlex="33">
       <!--<img src="/assets/dial-multicloud.svg"/>-->
       <h2>Multilingual compilers</h2>
-      <p>Translate between Rust, Swift (iOS), Java (Android), Kotlin (Android), TypeScript (web).</p>
+      <p>Translate between code between languages, to speedup develop, improve consistency, and increase doc & test
+        coverage.</p>
+      <div fxLayout="row">
+        <ul fxFlex="50">
+          <li>Swift (iOS)</li>
+          <li>Java (Android)</li>
+          <li>Kotlin (Android)</li>
+        </ul>
+        <ul>
+          <li>Rust</li>
+          <li>Python</li>
+          <li>TypeScript (web)</li>
+        </ul>
+      </div>
     </div>
 
     <div fxFlex="33">
       <!--<img src="/assets/dial-distributed.svg"/>-->
       <h2>Multicluster</h2>
-      <p>Kubernetes and/or Mesos. We're also contributing major changes to their core infrastructure.</p>
+      <p>Deploy, manage, and maintain multiple Docker containers at scale with Kubernetes.</p>
+      <p>Coordinate multiple distributed systems in the one cluster with Apache Mesos.</p>
+      <p>Major C++ contributions to Mesos, and major Go contributions to Kubernetes.</p>
     </div>
 
     <div fxFlex="33">
       <!--<img src="/assets/dial-heart.svg"/>-->
       <h2>100% open source</h2>
-      <div>(Apache OR MIT) licensed. Totally free. We have 344 repos on GitHub; 226 of which are original (not forks).
+      <p>(Apache-2.0 OR MIT) licensed. Totally free.
+      </p>
+      <div fxLayout="row">
+        <ul fxFlex="50">
+          <li>344 repos on GitHub</li>
+        </ul>
+        <ul>
+          <li>226 of which are original (not
+            forks)</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -102,10 +169,11 @@
 <footer fxLayout="row" fxLayoutAlign="center center"
         style="padding: 40px 0 40px 90px" ngStyle.lt-md="{'padding': 0 40px}"
         class="text-center">
-  <a routerLink="/" fxFlex>
-    <app-svg-viewer fxFlex src="/assets/logo-offscale.svg"></app-svg-viewer>
+  <a fxFlex="auto" routerLink="/">
+    <h1>offscale.io</h1>
+    <h3>engineering and<br/>research that scales</h3>
   </a>
-  <div class="mobile-hide" fxFlex>
-    &copy; 2018&ndash;2020 <a href="https://offscale.io">offscale</a>
+  <div fxFlex>
+    &copy; 2018&ndash;2020
   </div>
 </footer>

@@ -5,7 +5,7 @@
   "description": "Branding, contact, and information SPA for offscale.io",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4205",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

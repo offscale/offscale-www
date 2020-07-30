@@ -1,12 +1,8 @@
 <section class="hero" fxLayout="column">
-  <nav fxFlex fxLayout="row" ngStyle.gt-sm="padding-top: 20px" ngStyle.lt-md="padding-top: 0" style="margin-bottom: 20px">
+  <nav fxFlex fxLayout="row" style="padding-top: 20px; margin-bottom: 20px">
     <a fxFlex.gt-md="50" routerLink="/">
       <h1>offscale.io</h1>
       <h3>engineering and<br/>research that scales</h3>
-      <!--<img alt="Offscale"
-           height="100px"
-           src="/assets/logo-offscale.svg"
-           style="width: 100%"/>-->
     </a>
     <h1 fxFlex fxLayoutAlign="end" ngStyle.lt-md="font-size: small">
       <a href="https://github.com/offscale">
@@ -16,5 +12,5 @@
       </a>
     </h1>
   </nav>
-  <ng-content fxFlex></ng-content>
+  <ng-content fxFlex="auto"></ng-content>
 </section>

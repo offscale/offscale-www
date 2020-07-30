@@ -67,6 +67,7 @@ footer {
   font-weight: bold;
   font-size: 48px;
 }
+
 @media (max-width: 400px) {
   .text-size-xl {
     font-weight: bold;
@@ -173,8 +174,38 @@ h2 {
     flex-direction: column;
   }
 }
+
 @media (max-width: 1000px) {
   .mobile-hide {
     display: none;
+  }
+}
+
+footer {
+  h1, h3, a {
+    font-family: 'Nunito Sans', Arial, serif;
+    line-height: 1;
+    margin: 0;
+  }
+
+  a:link {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 80px;
+    font-size: 20px;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+
+  h3 {
+    font-weight: normal;
   }
 }
