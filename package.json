@@ -1,6 +1,6 @@
 {
   "name": "offscale-www",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "(Apache-2.0 OR MIT)",
   "description": "Branding, contact, and information SPA for offscale.io",
   "scripts": {

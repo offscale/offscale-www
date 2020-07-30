@@ -4,64 +4,53 @@
   </div>
 </app-navbar>
 
-<section class="about center">
-  <div class="flex-container flex-cols m-v-lg">
-    <!--
-    <div class="hero-image" style="margin-top: -200px;" [innerHtml]="safeHtml" *ngIf="safeHtml">
-      <a href="https://asciinema.org/a/287747" target="_blank">
-        <img src="https://asciinema.org/a/287747.svg"/>
-      </a>
-    </div>
-    -->
+<section class="center" fxLayout="column" style="padding: 0 18%" ngStyle.lt-md="padding: 0">
+  <div class="m-v-lg text-size-lg" fxFlex="100">
+    Hardcore programming as a consultancy.
+  </div>
 
-    <div class="flex-container m-v-lg text-size-lg fixed-width-md">
-      Stop relying on backend and cloud&nbsp;as&nbsp;a&nbsp;Service providers.<br/>Confidently roll your own infrastructure, and/or use their hosted services.
-    </div>
 
-    <div fxLayout="row" fxLayout.lt-md="column">
-      <div fxFlex>
-        <img src="/assets/dial-36x.svg"/>
-        <h2>36&times; faster</h2>
-        <div>Speedup development through our compilers. More details on <a href="https://compilers.com.au"
-                                                                           target="_blank">its website</a>.
-        </div>
-      </div>
-
-      <div fxFlex>
-        <img src="/assets/dial-heart.svg"/>
-        <h2>100% open source</h2>
-        <div>(Apache OR MIT) licensed. Totally free.</div>
-      </div>
-
-      <div fxFlex>
-        <img src="/assets/dial-gear.svg"/>
-        <h2>Infrastructure</h2>
-        <div>Our contributions to Kubernetes and Apache Mesos will allow them to scale down to 1 node then back up to
-          5,000 and 10,000 nodes respectively.
-        </div>
-      </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxFlex="100">
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-multicloud.svg"/>-->
+      <h2>Cross-platform</h2>
+      <p>Build and release for Windows, Linux, macOS, FreeBSD, OpenBSD, Solaris (OpenSolaris &rarr; OpenIndiana).</p>
     </div>
 
-    <div fxLayout="row" fxLayout.lt-md="column">
-      <div fxFlex>
-        <img src="/assets/dial-multicloud.svg"/>
-        <h2>Multicloud</h2>
-        <div>Supporting over 52 different public and private cloud providers.</div>
-      </div>
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-distributed.svg"/>-->
+      <h2>Multicloud</h2>
+      <p>Deploy and manage across any of 50+ different public and private cloud providers.</p>
+    </div>
 
-      <div fxFlex>
-        <img src="/assets/dial-distributed.svg"/>
-        <h2>Distributed systems</h2>
-        <div>C++, Rust, Go, and Python development. Custom consensus and<br/> both stack and register based VMs.</div>
-      </div>
-
-      <div fxFlex>
-        <img src="/assets/dial-ml.svg"/>
-        <h2>Artificial Intelligence</h2>
-        <div>Meta-framework atop TensorFlow and PyTorch developed during our founder's PhD.</div>
-      </div>
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-ml.svg"/>-->
+      <h2>Machine Learning and Artificial Intelligence</h2>
+      <p>Meta-framework built supporting: TensorFlow, Keras, PyTorch, XGBoost, scikit.learn, JAX, Trax, Flax,
+        &amp;etc.</p>
     </div>
   </div>
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxFlex="100">
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-multicloud.svg"/>-->
+      <h2>Multilingual compilers</h2>
+      <p>Translate between Rust, Swift (iOS), Java (Android), Kotlin (Android), TypeScript (web).</p>
+    </div>
+
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-distributed.svg"/>-->
+      <h2>Multicluster</h2>
+      <p>Kubernetes and/or Mesos. We're also contributing major changes to their core infrastructure.</p>
+    </div>
+
+    <div fxFlex="33">
+      <!--<img src="/assets/dial-heart.svg"/>-->
+      <h2>100% open source</h2>
+      <div>(Apache OR MIT) licensed. Totally free. We have 344 repos on GitHub; 226 of which are original (not forks).</div>
+    </div>
+  </div>
+
 </section>
 
 <section class="">
@@ -72,14 +61,23 @@
     <div>
       <div class="text-bold text-size-md">Compilers</div>
       <p>
-        The key differentiator in <a href="https://compilers.com.au" target="_blank">our approach</a>, is that we explicitly and
+        The key differentiator in <a href="https://compilers.com.au" target="_blank">our approach</a>, is that we
+        explicitly and
         statically traverse the AST of each language, in each language, then
         code-generate merged changes.
       </p>
 
       <div class="text-bold text-size-md">Infrastructure</div>
       <p>
-        Stop relying on database as a Service (DBaaS), container as a Service (caaS), platform as a Service (PaaS). Switch been vendors, be portable, use aaS when relevant threshold is met.
+        Stop relying on database as a Service (DBaaS), container as a Service (caaS), platform as a Service (PaaS).
+        Switch been vendors, be portable, use aaS when relevant threshold is met.
+      </p>
+
+      <div class="text-bold text-size-md">Machine-learning and Artificial Intelligence</div>
+      <p>
+        Our founder submitted his PhD (Medicine), 40% of which was in ML/AI.
+        He noticed that breakthroughs were siloed to specific vendors.
+        So we created a multi ML framework to use whatever vendors' innovations.
       </p>
 
       <div class="text-bold text-size-md">Open Source</div>
@@ -92,13 +90,11 @@
   </div>
 </section>
 
-<section class="case_study p-v-lg">
-  <div class="flex-container text-center flex-cols flex-center">
-    <div class="m-v-md text-size-lg">Software-engineering consulting</div>
-    <a href="mailto:samuel@offscale.io" class="btn btn-primary m-v-md">
-      get in touch
-    </a>
-  </div>
+<section class="case_study p-v-lg center" fxLayout="column">
+  <div fxFlex="auto" class="m-v-md text-size-lg">Software-engineering consulting</div>
+  <a fxFlex="auto" href="mailto:samuel@offscale.io" class="btn btn-primary m-v-md center" fxFlexAlign="center">
+    get in touch
+  </a>
 </section>
 
 <footer fxLayout="row" fxLayoutAlign="center center"
