@@ -1,16 +1,16 @@
-<section class="hero" fxLayout="column">
-  <nav fxFlex fxLayout="row" style="padding-top: 20px; margin-bottom: 20px">
-    <a fxFlex.gt-md="50" routerLink="/">
+<section class="hero flex-direction-column">
+  <nav class="flex-direction-row" style="padding-top: 20px; margin-bottom: 20px">
+    <a class="gt-md-width-pc-50" routerLink="/">
       <h1>offscale.io</h1>
       <h3>engineering and<br/>research that scales</h3>
     </a>
-    <h1 fxFlex fxLayoutAlign="end" ngStyle.lt-md="font-size: small">
+    <h1>
       <a href="https://github.com/offscale">
         <img alt="GitHub repos for Offscale"
-             height="50px"
-             ngStyle.lt-md="height: 30px; padding: 0 10px" src="/assets/github-white.svg"/>
+             width="51" height="50" id="github-logo"
+             ngSrc="/assets/github-white.svg" />
       </a>
     </h1>
   </nav>
-  <ng-content fxFlex="auto"></ng-content>
+  <ng-content></ng-content>
 </section>

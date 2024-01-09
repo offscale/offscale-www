@@ -4,7 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-slash',
   templateUrl: './slash.component.html',
-  styleUrls: ['./slash.component.scss']
+  styleUrls: ['./slash.component.scss', '../../assets/styles/flex.scss']
 })
 export class SlashComponent implements OnInit {
   safeHtml;

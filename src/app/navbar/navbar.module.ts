@@ -1,21 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NavbarComponent } from './navbar.component';
 
 
 @NgModule({
   declarations: [NavbarComponent],
-  exports: [
-    NavbarComponent
-  ],
-  imports: [
-    CommonModule,
-    FlexLayoutModule,
-    RouterModule
-  ]
+  exports: [NavbarComponent],
+  imports: [CommonModule, RouterModule, NgOptimizedImage]
 })
 export class NavbarModule {}
