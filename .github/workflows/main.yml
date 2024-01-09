@@ -25,11 +25,11 @@ jobs:
           ng add --skip-confirmation angular-cli-ghpages
           npm ci
           ng build --configuration production
-          head -n7 README.md > 'dist/offscale-www/README.md'
+          head -n6 README.md > 'dist/offscale-www/README.md'
           MSG="$(git show -s --format='%s' "$GITHUB_SHA")"
           email_author="$(git log -1 --pretty=format:'%an <%ce>')"
           author="${email_author% *}"
           git config --global user.name "$author"
           email="${email_author#*<}"; email="${email::-1}"
           git config --global user.email "$email"
-          ng deploy offscale-www --cname='offscale.io' --repo='https://'"$GITHUB_TOKEN"'@github.com/offscale/offscale.github.io' --branch='master' --message="$MSG" --name="$name" --email="$email" --no-silent
+          npx angular-cli-ghpages --dir='dist/offscale-www' --cname='offscale.io' --repo='https://'"$GITHUB_TOKEN"'@github.com/offscale/offscale.github.io' --branch='master' --message="$MSG" --name="$name" --email="$email" --no-silent
