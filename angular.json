@@ -45,7 +45,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "2.1kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "offscale-www:build:production"
+              "buildTarget": "offscale-www:build:production"
             },
             "development": {
-              "browserTarget": "offscale-www:build:development"
+              "buildTarget": "offscale-www:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "offscale-www:build"
+            "buildTarget": "offscale-www:build"
           }
         },
         "test": {

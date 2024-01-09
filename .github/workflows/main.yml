@@ -25,7 +25,7 @@ jobs:
           ng add --skip-confirmation angular-cli-ghpages
           npm ci
           ng build --configuration production
-          cp README.md dist/compilers-www
+          head -n7 README.md > 'dist/offscale-www/README.md'
           MSG="$(git show -s --format='%s' "$GITHUB_SHA")"
           email_author="$(git log -1 --pretty=format:'%an <%ce>')"
           author="${email_author% *}"
