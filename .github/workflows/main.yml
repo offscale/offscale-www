@@ -19,6 +19,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          DIST: 'dist/offscale-www'
+          TARGET: 'offscale/offscale.github.io'
+          CNAME: 'offscale.io'
         run: |
           npm i -g npm
           npm i -g @angular/cli typescript angular-cli-ghpages
@@ -30,7 +33,8 @@ jobs:
           git config --global user.name "$author"
           email="${email_author#*<}"; email="${email::-1}"
           git config --global user.email "$email"
-          cname='offscale.io'
-          ng build --configuration production --base-href 'https://'"$cname"
-          head -n6 README.md > 'dist/offscale-www/README.md'
-          npx angular-cli-ghpages --dir='dist/offscale-www' --cname="$cname" --repo='https://'"$GITHUB_TOKEN"'@github.com/offscale/offscale.github.io' --branch='master' --message="$MSG" --name="$name" --email="$email" --no-silent
+          ng build --configuration production --base-href 'https://'"$CNAME"
+          head -n6 README.md > "$DIST"'/README.md'
+          mv "$DIST"'/browser'/* "$DIST"
+          npx angular-cli-ghpages --dir="$DIST" --cname="$CNAME" --repo='https://'"$GITHUB_TOKEN"'@'"$TARGET" --branch='master' --message="$MSG" --name="$name" --email="$email" --no-silent
+
