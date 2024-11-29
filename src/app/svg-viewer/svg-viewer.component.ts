@@ -5,9 +5,10 @@ const getAbsolutePathFromSrc = (src: string): string =>
   src.slice(src.indexOf('assets/') - 1);
 
 @Component({
-  selector: 'app-svg-viewer',
-  templateUrl: './svg-viewer.component.html',
-  styleUrls: ['./svg-viewer.component.scss']
+    selector: 'app-svg-viewer',
+    templateUrl: './svg-viewer.component.html',
+    styleUrls: ['./svg-viewer.component.scss'],
+    standalone: false
 })
 export class SvgViewerComponent implements OnInit {
   @Input() src: string | undefined;
