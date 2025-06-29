@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class NavbarComponent {
+  openUrl(url: string, target: string) {
+    window.open(url, target)
+  }
 }

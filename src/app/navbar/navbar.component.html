@@ -13,15 +13,15 @@
     </h1>
   </nav>
   <nav class="flex-direction-row"
-       style="background: rgb(66, 158, 157); color: whitesmoke; line-height: unset !important;">
+       style="background: rgb(66, 158, 157); color: whitesmoke; line-height: unset !important;"
+       (click)="openUrl('https://rewriteInC.io', '_blank')">
     New: <a href="https://rewriteInC.io" target="_blank" style="line-height: unset !important;">&num;rewriteInC.io</a>
-    released for
-    C code synchronisation; OpenAPI &harr; C SDK; and C &rarr; &lbrace;every lang wrapper&rbrace;
+    released for: C source-code synchronisation; OpenAPI &harr; C SDK; and C SDK &rarr; &lbrace;every lang wrapper&rbrace;
   </nav>
-  <nav class="flex-direction-row" style="background: steelblue; color: whitesmoke; line-height: unset !important;">
+  <nav class="flex-direction-row" style="background: steelblue; color: whitesmoke; line-height: unset !important;"
+       (click)="openUrl('https://verMan.io', '_blank')">
     New: <a href="https://verMan.io" target="_blank" style="line-height: unset !important;">verMan.io</a> released for
-    1-click deploys: any &lbrace;ML,database,server&rbrace;
-    any &lbrace;cloud,VM,docker,machine&rbrace; from/to any OS
+    1-click deploys: any &lbrace;ML,database,server&rbrace; any &lbrace;cloud,VM,docker,machine&rbrace; from/to any OS
   </nav>
   <ng-content></ng-content>
 </section>
